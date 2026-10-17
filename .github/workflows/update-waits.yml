@@ -1,0 +1,69 @@
+# Have Sick — collect live wait times every 10 minutes and publish the site to GitHub Pages.
+#
+# Pages source must be "GitHub Actions" (Settings -> Pages -> Build and deployment -> Source).
+# Why not "Deploy from a branch": GitHub docs say commits pushed by a workflow using GITHUB_TOKEN
+# do NOT trigger a Pages build, so the data would never be published. Deploying from this workflow
+# also avoids the "10 builds per hour" soft limit that applies to branch builds.
+#
+# Schedule caveats (GitHub docs): runs can be delayed at busy times (especially minute 0 of the hour)
+# and some may be dropped; the shortest interval is 5 min. We use minutes 3,13,23,33,43,53 (UTC).
+# In a PUBLIC repo, scheduled workflows are disabled after 60 days with no repository activity.
+# This workflow commits waits.json whenever the wait values really change (several times a day),
+# which should count as activity; if it is ever disabled: Actions -> this workflow -> "Enable workflow".
+name: Update wait data and publish
+on:
+  schedule:
+    - cron: '3-59/10 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths-ignore: ['data/waits.json']
+
+permissions:
+  contents: write    # commit data/waits.json
+  pages: write       # deploy to GitHub Pages
+  id-token: write    # required by actions/deploy-pages
+
+concurrency:
+  group: havesick-data
+  cancel-in-progress: false
+
+jobs:
+  collect-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Collect live wait times (one polite request per source)
+        run: |
+          cp data/waits.json "$RUNNER_TEMP/waits_before.json" 2>/dev/null || true
+          python3 scripts/collect.py || echo "::warning::All sources failed this run; publishing last known (stale-marked) data."
+
+      - name: Commit waits.json only if the wait values materially changed
+        run: |
+          if python3 scripts/material_change.py "$RUNNER_TEMP/waits_before.json" data/waits.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/waits.json
+            git commit -m "data: wait times $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push || echo "::warning::git push failed (someone else pushed?) - will retry next run"
+          fi
+
+      - name: Prepare site folder
+        run: |
+          mkdir -p "$RUNNER_TEMP/site"
+          tar --exclude='./.git' --exclude='./.github' --exclude='./tests' --exclude='./test-evidence' -cf - . | tar -xf - -C "$RUNNER_TEMP/site"
+
+      - uses: actions/configure-pages@v6
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: ${{ runner.temp }}/site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
