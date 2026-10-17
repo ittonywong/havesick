@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Have Sick — NZ urgent care wait times near you</title>
+<meta name="description" content="Find the nearest New Zealand urgent care clinic or hospital with live wait times, and get directions.">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#c62828">
+<meta name="apple-mobile-web-app-title" content="Have Sick">
+<script>/* apply saved text size before first paint */try{var l=[100,115,130,150,175][+localStorage.getItem('havesick.fontLevel')];if(l)document.documentElement.style.fontSize=l+'%';}catch(e){}</script>
+</head>
+<body>
+<div class="emergency" role="alert">
+  <strong data-i18n="emergencyTitle">Life-threatening emergency? Call 111</strong>
+  <span><a href="tel:111" class="pill red" data-i18n="call111">Call 111</a>
+  <a href="tel:0800611116" class="pill" data-i18n="healthline">Healthline 0800 611 116 (free, 24/7)</a></span>
+</div>
+
+<header>
+  <div class="brand"><span class="logo" aria-hidden="true">✚</span> <h1>Have Sick</h1> <small data-i18n="tagline">NZ urgent care wait times</small></div>
+  <div class="tools">
+    <div class="fontctl" role="group" data-i18n-aria="fontGroup" aria-label="Text size">
+      <button id="fontDown" type="button" class="fbtn" data-i18n-aria="fontSmaller" aria-label="Smaller text">A−</button>
+      <button id="fontReset" type="button" class="fbtn" data-i18n-aria="fontReset" aria-label="Default text size">A</button>
+      <button id="fontUp" type="button" class="fbtn" data-i18n-aria="fontLarger" aria-label="Larger text">A+</button>
+      <span id="fontLevel" class="flevel" aria-live="polite">100%</span>
+    </div>
+    <button id="langBtn" type="button" class="lang" data-i18n-aria="langAria" aria-label="切換至繁體中文">繁中</button>
+  </div>
+</header>
+
+<section class="controls">
+  <button id="locBtn" class="primary" data-i18n="useLocation">📍 Use my location</button>
+  <label class="city"><span data-i18n="orPickCity">or pick a city:</span>
+    <select id="citySel"><option value="" data-i18n="chooseCity">Choose…</option></select>
+  </label>
+  <p class="hint" data-i18n="tapHint">You can also tap the map to set your location.</p>
+  <p id="locStatus" class="status" aria-live="polite"></p>
+  <div class="filters">
+    <label><span data-i18n="show">Show</span>
+      <select id="typeSel">
+        <option value="urgent" data-i18n="fUrgent">Urgent &amp; ED</option>
+        <option value="live" data-i18n="fLive">Live waits only</option>
+        <option value="all" data-i18n="fAll">All places</option>
+      </select></label>
+    <label><span data-i18n="within">Within (km)</span>
+      <select id="radiusSel"><option>10</option><option selected>25</option><option>50</option><option>100</option></select></label>
+    <label><span data-i18n="sortBy">Sort</span>
+      <select id="sortSel">
+        <option value="rec" data-i18n="sRec">Recommended</option>
+        <option value="near" data-i18n="sNear">Nearest</option>
+      </select></label>
+  </div>
+  <p class="hint" data-i18n="sortHint">Recommended = open now → shortest wait → nearest.</p>
+</section>
+
+<div id="dataBanner" class="databanner" hidden></div>
+<div id="map" aria-label="Map"></div>
+
+<main>
+  <ol id="list" class="list"></ol>
+  <p id="empty" class="empty" data-i18n="noLocation">Set your location to see the nearest places.</p>
+</main>
+
+<section class="legend">
+  <h2 data-i18n="howToRead">How to read the wait values</h2>
+  <ul>
+    <li data-i18n="legMinutes"><b>Minutes / hours</b> — estimated wait for non-urgent patients, published by the clinic.</li>
+    <li data-i18n="legBusy"><b>Busyness 0–10</b> — White Cross clinics publish a busyness level, not minutes (0 = quiet, 10 = very busy).</li>
+    <li data-i18n="legStale"><b>Greyed out</b> — data older than 30 minutes or the source could not be reached; do not rely on it.</li>
+    <li data-i18n="legNoData"><b>No live data</b> — please phone the clinic before going.</li>
+  </ul>
+  <h2 data-i18n="sources">Data sources</h2>
+  <ul id="sourceList" class="sources"></ul>
+</section>
+
+<footer>
+  <p data-i18n="disclaimer">Disclaimer: Have Sick is an independent information tool, not a medical service and not affiliated with Health NZ or any clinic. Wait times come from clinics' public websites, are estimates for non-urgent patients, and can change quickly — patients are seen in order of clinical urgency. Always phone ahead if unsure. In an emergency call 111. For free health advice call Healthline 0800 611 116.</p>
+  <p class="attr" data-i18n-html="attribution">Clinic &amp; hospital locations © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a> (ODbL). Map tiles © OpenStreetMap. Wait data © the respective clinics.</p>
+  <p class="attr"><span data-i18n="generated">Wait data generated:</span> <span id="genAt">—</span></p>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="assets/i18n.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
