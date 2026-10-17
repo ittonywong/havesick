@@ -1,0 +1,24 @@
+# Weekly refresh of hospital / clinic locations from OpenStreetMap (Overpass API).
+# The next "Update wait data and publish" run deploys the new places.json.
+name: Update places (OpenStreetMap)
+on:
+  schedule:
+    - cron: '17 15 * * 0'   # Sunday 15:17 UTC (~Monday 3-4am NZ)
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: havesick-data
+  cancel-in-progress: false
+jobs:
+  places:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - run: python3 scripts/build_places.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/places.json
+          git diff --cached --quiet || { git commit -m "data: OSM places $(date -u +%F)"; git push; }
