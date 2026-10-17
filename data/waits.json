@@ -1,0 +1,389 @@
+{
+ "generated_at": "2026-10-17T17:41:42Z",
+ "user_agent": "HaveSick/0.2 (personal family wait-time viewer; +https://github.com/ittonywong/havesick)",
+ "sources": {
+  "whitecross": {
+   "name": "White Cross (Auckland & Whangārei)",
+   "url": "https://www.whitecross.co.nz/urgent-care-wait-times",
+   "attempted_at": "2026-10-17T17:41:42Z",
+   "status": "ok",
+   "fetched_at": "2026-10-17T17:41:42Z",
+   "last_success_at": "2026-10-17T17:41:42Z",
+   "source_updated_at": null,
+   "source_updated_note": "Rendered live on each page load (no timestamp published)",
+   "error": null,
+   "failures": 0,
+   "next_attempt_at": null,
+   "count": 10,
+   "http": {
+    "bytes": 29183,
+    "last_status": 200,
+    "etag": null,
+    "last_modified": null
+   }
+  },
+  "pegasus": {
+   "name": "Pegasus 24 Hour Surgery (Christchurch)",
+   "url": "https://www.pegasus.health.nz/wait-time-dashboard",
+   "attempted_at": "2026-10-17T17:41:44Z",
+   "status": "ok",
+   "fetched_at": "2026-10-17T17:41:44Z",
+   "last_success_at": "2026-10-17T17:41:44Z",
+   "source_updated_at": "2026-10-17T17:41:00Z",
+   "source_updated_note": "Page \"Last updated\" text (appears to equal page render time)",
+   "error": null,
+   "failures": 0,
+   "next_attempt_at": null,
+   "count": 1,
+   "http": {
+    "bytes": 11376,
+    "last_status": 200,
+    "etag": null,
+    "last_modified": null
+   }
+  },
+  "accidenthealth": {
+   "name": "Accident & HealthCare (Tauranga)",
+   "url": "https://www.accidenthealth.co.nz/",
+   "attempted_at": "2026-10-17T17:41:45Z",
+   "status": "ok",
+   "fetched_at": "2026-10-17T17:41:45Z",
+   "last_success_at": "2026-10-17T17:41:45Z",
+   "source_updated_at": null,
+   "source_updated_note": "Rendered live on page load; the page itself refreshes every 120 s",
+   "error": null,
+   "failures": 0,
+   "next_attempt_at": null,
+   "count": 1,
+   "http": {
+    "bytes": 4861,
+    "last_status": 200,
+    "etag": null,
+    "last_modified": null
+   }
+  },
+  "anglesea": {
+   "name": "Anglesea Clinic (Hamilton)",
+   "url": "https://angleseawaittimes.org.nz/waittimes.json",
+   "attempted_at": "2026-10-17T17:41:47Z",
+   "status": "ok",
+   "not_modified": true,
+   "fetched_at": "2026-10-17T17:41:47Z",
+   "last_success_at": "2026-10-17T17:41:47Z",
+   "source_updated_at": "2026-10-17T15:19:00Z",
+   "source_updated_note": "HTTP Last-Modified of waittimes.json (updated irregularly)",
+   "error": null,
+   "failures": 0,
+   "next_attempt_at": null,
+   "count": 1,
+   "http": {
+    "bytes": 0,
+    "last_status": 304,
+    "etag": "W/\"6ad391e4-5f\"",
+    "last_modified": "Sat, 17 Oct 2026 15:19:00 GMT"
+   }
+  }
+ },
+ "places": [
+  {
+   "id": "whitecross-as",
+   "name": "Ascot 24/7 Urgent Care",
+   "brand": "White Cross",
+   "kind": "urgent",
+   "lat": -36.887399,
+   "lon": 174.801597,
+   "is_open": true,
+   "phone": "09 520 9555",
+   "website": "https://www.whitecross.co.nz/clinics/ascot-24-7-uc",
+   "wait": {
+    "type": "busyness",
+    "value": 1,
+    "scale_max": 10,
+    "label": "1/10 busyness"
+   },
+   "source": "whitecross",
+   "fetched_at": "2026-10-17T17:41:42Z",
+   "stale": false,
+   "source_updated_at": null
+  },
+  {
+   "id": "whitecross-fr",
+   "name": "Franklin Urgent Care",
+   "brand": "White Cross",
+   "kind": "urgent",
+   "lat": -37.2082148,
+   "lon": 174.9084778,
+   "is_open": false,
+   "phone": "09 238 6610",
+   "website": "https://www.whitecross.co.nz/clinics/franklin-urgent-care",
+   "wait": {
+    "type": "busyness",
+    "value": 0,
+    "scale_max": 10,
+    "label": "0/10 busyness"
+   },
+   "source": "whitecross",
+   "fetched_at": "2026-10-17T17:41:42Z",
+   "stale": false,
+   "source_updated_at": null
+  },
+  {
+   "id": "whitecross-hn",
+   "name": "Henderson 24/7 Urgent Care",
+   "brand": "White Cross",
+   "kind": "urgent",
+   "lat": -36.864298,
+   "lon": 174.630651,
+   "is_open": true,
+   "phone": "09 836 3336",
+   "website": "https://www.whitecross.co.nz/clinics/henderson-24-7-uc",
+   "wait": {
+    "type": "busyness",
+    "value": 0,
+    "scale_max": 10,
+    "label": "0/10 busyness"
+   },
+   "source": "whitecross",
+   "fetched_at": "2026-10-17T17:41:42Z",
+   "stale": false,
+   "source_updated_at": null
+  },
+  {
+   "id": "whitecross-ym",
+   "name": "Local Doctors Mt Roskill GP & Urgent Care",
+   "brand": "White Cross",
+   "kind": "urgent",
+   "lat": -36.912289,
+   "lon": 174.728237,
+   "is_open": false,
+   "phone": "09 627 8552",
+   "website": "https://www.whitecross.co.nz/clinics/mt-roskill-gp-urgent-care",
+   "wait": {
+    "type": "busyness",
+    "value": 0,
+    "scale_max": 10,
+    "label": "0/10 busyness"
+   },
+   "source": "whitecross",
+   "fetched_at": "2026-10-17T17:41:42Z",
+   "stale": false,
+   "source_updated_at": null
+  },
+  {
+   "id": "whitecross-br",
+   "name": "Ōtara 24/7 GP & Urgent Care",
+   "brand": "White Cross",
+   "kind": "urgent",
+   "lat": -36.961817,
+   "lon": 174.873384,
+   "is_open": true,
+   "phone": "09 274 3414",
+   "website": "https://www.whitecross.co.nz/clinics/otara-24-7-gp-uc",
+   "wait": {
+    "type": "busyness",
+    "value": 1,
+    "scale_max": 10,
+    "label": "1/10 busyness"
+   },
+   "source": "whitecross",
+   "fetched_at": "2026-10-17T17:41:42Z",
+   "stale": false,
+   "source_updated_at": null
+  },
+  {
+   "id": "whitecross-sl",
+   "name": "St Lukes Urgent Care",
+   "brand": "White Cross",
+   "kind": "urgent",
+   "lat": -36.881544,
+   "lon": 174.732052,
+   "is_open": false,
+   "phone": "09 815 3111",
+   "website": "https://www.whitecross.co.nz/clinics/st-lukes-uc",
+   "wait": {
+    "type": "busyness",
+    "value": 0,
+    "scale_max": 10,
+    "label": "0/10 busyness"
+   },
+   "source": "whitecross",
+   "fetched_at": "2026-10-17T17:41:42Z",
+   "stale": false,
+   "source_updated_at": null
+  },
+  {
+   "id": "whitecross-wh",
+   "name": "Whangārei Urgent Care",
+   "brand": "White Cross",
+   "kind": "urgent",
+   "lat": -35.726629,
+   "lon": 174.32647,
+   "is_open": false,
+   "phone": "09 470 1083",
+   "website": "https://www.whitecross.co.nz/clinics/whangarei-uc",
+   "wait": {
+    "type": "busyness",
+    "value": 0,
+    "scale_max": 10,
+    "label": "0/10 busyness"
+   },
+   "source": "whitecross",
+   "fetched_at": "2026-10-17T17:41:42Z",
+   "stale": false,
+   "source_updated_at": null
+  },
+  {
+   "id": "whitecross-gf",
+   "name": "Glenfield GP & Urgent Care",
+   "brand": "White Cross",
+   "kind": "urgent",
+   "lat": -36.780841,
+   "lon": 174.721987,
+   "is_open": false,
+   "phone": "09 444 4244 ext 3",
+   "website": "https://www.whitecross.co.nz/clinics/glenfield-gp-uc-1",
+   "wait": {
+    "type": "busyness",
+    "value": 0,
+    "scale_max": 10,
+    "label": "0/10 busyness"
+   },
+   "source": "whitecross",
+   "fetched_at": "2026-10-17T17:41:42Z",
+   "stale": false,
+   "source_updated_at": null
+  },
+  {
+   "id": "whitecross-la",
+   "name": "Lunn Ave GP & Urgent Care",
+   "brand": "White Cross",
+   "kind": "urgent",
+   "lat": -36.888378,
+   "lon": 174.831015,
+   "is_open": false,
+   "phone": "09 570 8899",
+   "website": "https://www.whitecross.co.nz/clinics/lunn-ave-gp-uc-1",
+   "wait": {
+    "type": "busyness",
+    "value": 0,
+    "scale_max": 10,
+    "label": "0/10 busyness"
+   },
+   "source": "whitecross",
+   "fetched_at": "2026-10-17T17:41:42Z",
+   "stale": false,
+   "source_updated_at": null
+  },
+  {
+   "id": "whitecross-nl",
+   "name": "New Lynn GP & Urgent Care",
+   "brand": "White Cross",
+   "kind": "urgent",
+   "lat": -36.901454,
+   "lon": 174.695829,
+   "is_open": false,
+   "phone": "09 828 8912",
+   "website": "https://www.whitecross.co.nz/clinics/new-lynn-gp-uc",
+   "wait": {
+    "type": "busyness",
+    "value": 0,
+    "scale_max": 10,
+    "label": "0/10 busyness"
+   },
+   "source": "whitecross",
+   "fetched_at": "2026-10-17T17:41:42Z",
+   "stale": false,
+   "source_updated_at": null
+  },
+  {
+   "id": "pegasus-24hoursurgery",
+   "name": "24 Hour Surgery (Pegasus Health)",
+   "kind": "urgent",
+   "lat": -43.5216188,
+   "lon": 172.6415322,
+   "is_open": true,
+   "hours": "24/7",
+   "phone": "03 365 7777",
+   "website": "https://www.24hoursurgery.co.nz/",
+   "wait": {
+    "type": "minutes",
+    "value": 180,
+    "approx_hours": true,
+    "plus": false,
+    "label": "~3 h (less-urgent patients)"
+   },
+   "patients_waiting": 1,
+   "in_treatment": 3,
+   "time_critical": 0,
+   "source_updated_at": "2026-10-17T17:41:00Z",
+   "source": "pegasus",
+   "fetched_at": "2026-10-17T17:41:44Z",
+   "stale": false
+  },
+  {
+   "id": "accidenthealth-tauranga",
+   "name": "Accident & HealthCare Tauranga",
+   "kind": "urgent",
+   "lat": -37.6892522,
+   "lon": 176.1681636,
+   "is_open": false,
+   "hours": "8am–8pm daily",
+   "phone": "07 577 0010",
+   "website": "https://www.accidenthealth.co.nz/",
+   "wait": {
+    "type": "minutes",
+    "value": null,
+    "label": "Closed"
+   },
+   "patients_waiting": null,
+   "source": "accidenthealth",
+   "fetched_at": "2026-10-17T17:41:45Z",
+   "stale": false,
+   "source_updated_at": null
+  },
+  {
+   "id": "anglesea-hamilton",
+   "name": "Anglesea Clinic (Accident & Medical)",
+   "kind": "urgent",
+   "lat": -37.7922146,
+   "lon": 175.2830788,
+   "is_open": true,
+   "hours": "24/7",
+   "phone": "07 858 0800",
+   "website": "https://www.angleseaclinic.org.nz/",
+   "wait": {
+    "type": "minutes",
+    "value": 90,
+    "label": "1h 30m"
+   },
+   "ed_wait_minutes": 660,
+   "patients_waiting": 1,
+   "source_updated_at": "2026-10-17T15:19:00Z",
+   "source": "anglesea",
+   "fetched_at": "2026-10-17T17:41:47Z",
+   "stale": false
+  }
+ ],
+ "robots": {
+  "https://www.whitecross.co.nz": {
+   "fetched_at": "2026-10-17T10:14:10Z",
+   "status": "ok",
+   "body": "User-agent: *\r\nDisallow: *?p=*\r\nDisallow: *?q=*\r\nDisallow: /images/*\r\nDisallow: /bundles/*\r\nDisallow: /App_Plugins/*\r\nDisallow: /umbraco/*\r\nDisallow: /api/*\r\nDisallow: *?mode=*\r\nDisallow: *?width=*\r\n"
+  },
+  "https://www.pegasus.health.nz": {
+   "fetched_at": "2026-10-17T10:14:12Z",
+   "status": "ok",
+   "body": "# robots.txt for https://www.pegasus.health.nz/\n\nsitemap: https://www.pegasus.health.nz/sitemaps-1-sitemap.xml\n\n# live - don't allow web crawlers to index cpresources/ or vendor/\n\nUser-agent: *\nDisallow: /cpresources/\nDisallow: /vendor/\nDisallow: /.env\nDisallow: /cache/\n\n\n# Disallow ChatGPT bot, as there's no benefit to allowing it to index your site\nUser-agent: GPTBot\nDisallow: /\n\n# Disallow Google Bard and Vertex AI bots, as there's no benefit to allowing it to index your site\nUser-agent: Google-Extended\nDisallow: /\n"
+  },
+  "https://www.accidenthealth.co.nz": {
+   "fetched_at": "2026-10-17T10:14:15Z",
+   "status": "ok",
+   "body": "User-agent: *\nDisallow: /application/attributes\nDisallow: /application/authentication\nDisallow: /application/bootstrap\nDisallow: /application/config\nDisallow: /application/controllers\nDisallow: /application/elements\nDisallow: /application/helpers\nDisallow: /application/jobs\nDisallow: /application/languages\nDisallow: /application/mail\nDisallow: /application/models\nDisallow: /application/page_types\nDisallow: /application/single_pages\nDisallow: /application/views\nDisallow: /ccm/system/captcha/picture\nSitemap: https://www.accidenthealth.co.nz/sitemap.xml\n"
+  },
+  "https://angleseawaittimes.org.nz": {
+   "fetched_at": "2026-10-17T10:14:16Z",
+   "status": "ok",
+   "body": "# As a condition of accessing this website, you agree to abide by the following\n# content signals:\n\n# (a)  If a content-signal = yes, you may collect content for the corresponding\n#      use.\n# (b)  If a content-signal = no, you may not collect content for the\n#      corresponding use.\n# (c)  If the website operator does not include a content signal for a\n#      corresponding use, the website operator neither grants nor restricts\n#      permission via content signal with respect to the corresponding use.\n\n# The content signals and their meanings are:\n\n# search:   building a search index and providing search results (e.g., returning\n#           hyperlinks and short excerpts from your website's contents). Search does not\n#           include providing AI-generated search summaries.\n# ai-input: inputting content into one or more AI models (e.g., retrieval\n#           augmented generation, grounding, or other real-time taking of content for\n#           generative AI search answers).\n# ai-train: training or fine-tuning AI models.\n\n# ANY RESTRICTIONS EXPRESSED VIA CONTENT SIGNALS ARE EXPRESS RESERVATIONS OF\n# RIGHTS UNDER ARTICLE 4 OF THE EUROPEAN UNION DIRECTIVE 2019/790 ON COPYRIGHT\n# AND RELATED RIGHTS IN THE DIGITAL SINGLE MARKET.\n"
+  }
+ }
+}

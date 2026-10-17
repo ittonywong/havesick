@@ -1,0 +1,67 @@
+/* All sizes in rem/em so text scales with the A−/A/A+ control AND the phone/browser default font size.
+   The html font-size is only ever set as a percentage (100%–175%), never in px. */
+:root{--red:#c62828;--ink:#1d2433;--muted:#5a6573;--bg:#f5f7fa;--card:#fff;--green:#2e7d32;--line:#dfe4ea;--blue:#1565c0;--tap:max(44px,2.75rem)}
+html{font-size:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;font-size:1rem;line-height:1.45;color:var(--ink);background:var(--bg);overflow-wrap:anywhere}
+a{color:var(--blue)}
+button,select,input{font:inherit}
+.emergency{background:var(--red);color:#fff;padding:.625rem .875rem;display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;justify-content:space-between}
+.emergency strong{flex:1 1 12rem}
+.emergency span{display:flex;flex-wrap:wrap;gap:.5rem}
+.emergency a.pill{color:#fff;border:.0625rem solid #fff;border-radius:1.5rem;padding:.5rem .875rem;text-decoration:none;font-size:.9375rem;display:inline-flex;align-items:center;min-height:var(--tap);line-height:1.2}
+.emergency a.pill.red{background:#fff;color:var(--red);font-weight:700}
+header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.5rem;padding:.75rem .875rem;background:#fff;border-bottom:.0625rem solid var(--line)}
+.brand{display:flex;align-items:baseline;gap:.5rem;flex-wrap:wrap;min-width:0}.brand h1{margin:0;font-size:1.375rem}.brand small{color:var(--muted);font-size:.875rem}
+.logo{color:var(--red);font-weight:900;font-size:1.375rem}
+.tools{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-left:auto}
+.fontctl{display:flex;align-items:center;gap:.25rem;flex-wrap:wrap}
+.fbtn,.lang{min-width:var(--tap);min-height:var(--tap);border:.0625rem solid var(--line);background:#fff;border-radius:.5rem;padding:.25rem .5rem;font-size:1rem;font-weight:700;color:var(--ink);line-height:1.1}
+.fbtn[aria-pressed="true"]{background:#e3eefc;border-color:var(--blue)}
+.fbtn:disabled{opacity:.4}
+.flevel{font-size:.8125rem;color:var(--muted);min-width:2.5rem;text-align:center}
+.controls{padding:.75rem .875rem;background:#fff;border-bottom:.0625rem solid var(--line)}
+button.primary{width:100%;min-height:var(--tap);padding:.75rem;font-size:1.0625rem;border:0;border-radius:.625rem;background:var(--blue);color:#fff;font-weight:600}
+.city{display:flex;gap:.5rem;align-items:center;margin-top:.625rem;flex-wrap:wrap}
+select{font-size:1rem;min-height:var(--tap);padding:.375rem .5rem;border:.0625rem solid var(--line);border-radius:.5rem;background:#fff;color:var(--ink);max-width:100%}
+.hint{color:var(--muted);font-size:.8125rem;margin:.375rem 0 0}.status{font-size:.875rem;margin:.375rem 0 0;color:var(--muted)}.status.err{color:var(--red)}
+.filters{display:flex;flex-wrap:wrap;gap:.625rem;margin-top:.625rem;font-size:.875rem}.filters label{display:flex;gap:.375rem;align-items:center;flex-wrap:wrap;max-width:100%}
+.databanner{margin:.625rem .875rem 0;padding:.625rem .75rem;border-radius:.5rem;background:#fff3cd;border:.0625rem solid #f0c36d;font-size:.875rem}
+#map{height:42vh;min-height:16rem;max-height:40rem;margin:.625rem .875rem;border-radius:.75rem;border:.0625rem solid var(--line)}
+.leaflet-touch .leaflet-bar a,.leaflet-bar a{width:44px;height:44px;line-height:44px;font-size:1.375rem}
+main{padding:0 .875rem}
+.list{list-style:none;margin:0;padding:0}
+.card{background:var(--card);border:.0625rem solid var(--line);border-radius:.75rem;padding:.75rem;margin:0 0 .625rem;box-shadow:0 .0625rem .125rem rgba(0,0,0,.04)}
+.card .top{display:flex;justify-content:space-between;gap:.5rem;flex-wrap:wrap}
+.card .top>div:first-child{flex:1 1 12rem;min-width:0}
+.card h3{margin:0;font-size:1.0625rem}.card .meta{font-size:.8125rem;color:var(--muted)}
+.dist{font-weight:700;white-space:nowrap}
+.badge{display:inline-block;font-size:.75rem;border-radius:.375rem;padding:.0625rem .375rem;margin:0 .25rem .125rem 0;background:#eef2f7;color:#334}
+.badge.open{background:#e3f4e6;color:var(--green)}.badge.closed{background:#fde8e8;color:var(--red)}.badge.live{background:#e3eefc;color:var(--blue)}
+.wait{margin:.5rem 0;padding:.5rem .625rem;border-radius:.5rem;background:#f2f5f9}
+.wait .val{font-size:1.25rem;font-weight:800}.wait .unit{font-size:.8125rem;color:var(--muted)}
+.wait.t0{background:#e6f5e8}.wait.t1{background:#fff6dd}.wait.t2{background:#ffe9d6}.wait.t3{background:#fde3e3}
+.busybar{height:.5rem;border-radius:.25rem;background:linear-gradient(90deg,#4caf50,#ffc107,#f44336);position:relative;margin:.375rem .125rem 0}
+.busybar i{position:absolute;top:-.25rem;width:.25rem;height:1rem;background:#111;border-radius:.125rem}
+.actions{display:flex;flex-wrap:wrap;gap:.375rem;margin-top:.5rem}
+.actions a{flex:1 1 7rem;display:flex;align-items:center;justify-content:center;text-align:center;text-decoration:none;border:.0625rem solid var(--line);border-radius:.5rem;padding:.5rem;font-size:.875rem;background:#fff;color:var(--ink);min-height:var(--tap);line-height:1.2}
+.actions a.nav{background:var(--blue);color:#fff;border-color:var(--blue)}
+.card.stale{opacity:.6;filter:grayscale(1)}
+.card.stale .stalewarn{display:block}
+.stalewarn{display:none;color:var(--red);font-size:.8125rem;font-weight:600;margin-top:.25rem}
+.empty{color:var(--muted);text-align:center;padding:1.25rem}
+.legend,footer{padding:.375rem .875rem .875rem;font-size:.875rem;color:var(--muted)}.legend h2{font-size:.9375rem;color:var(--ink);margin:.875rem 0 .375rem}
+.legend ul{padding-left:1.125rem;margin:0}.sources li{margin:.375rem 0}
+.src-ok{color:var(--green)}.src-err{color:var(--red)}
+footer{border-top:.0625rem solid var(--line);background:#fff}
+.attr{font-size:.75rem}
+.leaflet-container{font-size:.75rem}
+@media(min-width:56rem){body{max-width:70rem;margin:auto}#map{height:26rem}}
+.wait .val.closedval{font-size:1rem;font-weight:700;color:var(--red)}
+/* large-text reflow: side padding never grows beyond ~4% of the screen; filters stack; selects take the row */
+.emergency,header,.controls,main,.legend,footer{padding-left:min(.875rem,4vw);padding-right:min(.875rem,4vw)}
+#map,.databanner{margin-left:min(.875rem,4vw);margin-right:min(.875rem,4vw)}
+.filters label{flex:1 1 9rem}
+.filters select,.city select{flex:1 1 8rem;min-width:0;padding-left:.375rem;padding-right:.25rem}
+.filters label{flex-direction:column;align-items:stretch;gap:.125rem}
+.filters select{width:100%;flex:none}
