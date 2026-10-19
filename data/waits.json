@@ -1,14 +1,14 @@
 {
- "generated_at": "2026-10-19T06:53:35Z",
+ "generated_at": "2026-10-19T07:47:37Z",
  "user_agent": "HaveSick/0.2 (personal family wait-time viewer; +https://github.com/ittonywong/havesick)",
  "sources": {
   "whitecross": {
    "name": "White Cross (Auckland & Whangārei)",
    "url": "https://www.whitecross.co.nz/urgent-care-wait-times",
-   "attempted_at": "2026-10-19T06:53:35Z",
+   "attempted_at": "2026-10-19T07:47:37Z",
    "status": "ok",
-   "fetched_at": "2026-10-19T06:53:35Z",
-   "last_success_at": "2026-10-19T06:53:35Z",
+   "fetched_at": "2026-10-19T07:47:37Z",
+   "last_success_at": "2026-10-19T07:47:37Z",
    "source_updated_at": null,
    "source_updated_note": "Rendered live on each page load (no timestamp published)",
    "error": null,
@@ -16,7 +16,7 @@
    "next_attempt_at": null,
    "count": 10,
    "http": {
-    "bytes": 29333,
+    "bytes": 29207,
     "last_status": 200,
     "etag": null,
     "last_modified": null
@@ -25,18 +25,18 @@
   "pegasus": {
    "name": "Pegasus 24 Hour Surgery (Christchurch)",
    "url": "https://www.pegasus.health.nz/wait-time-dashboard",
-   "attempted_at": "2026-10-19T06:53:36Z",
+   "attempted_at": "2026-10-19T07:47:38Z",
    "status": "ok",
-   "fetched_at": "2026-10-19T06:53:36Z",
-   "last_success_at": "2026-10-19T06:53:36Z",
-   "source_updated_at": "2026-10-19T06:53:00Z",
+   "fetched_at": "2026-10-19T07:47:38Z",
+   "last_success_at": "2026-10-19T07:47:38Z",
+   "source_updated_at": "2026-10-19T07:47:00Z",
    "source_updated_note": "Page \"Last updated\" text (appears to equal page render time)",
    "error": null,
    "failures": 0,
    "next_attempt_at": null,
    "count": 1,
    "http": {
-    "bytes": 11377,
+    "bytes": 11378,
     "last_status": 200,
     "etag": null,
     "last_modified": null
@@ -45,10 +45,10 @@
   "accidenthealth": {
    "name": "Accident & HealthCare (Tauranga)",
    "url": "https://www.accidenthealth.co.nz/",
-   "attempted_at": "2026-10-19T06:53:37Z",
+   "attempted_at": "2026-10-19T07:47:39Z",
    "status": "ok",
-   "fetched_at": "2026-10-19T06:53:37Z",
-   "last_success_at": "2026-10-19T06:53:37Z",
+   "fetched_at": "2026-10-19T07:47:39Z",
+   "last_success_at": "2026-10-19T07:47:39Z",
    "source_updated_at": null,
    "source_updated_note": "Rendered live on page load; the page itself refreshes every 120 s",
    "error": null,
@@ -56,7 +56,7 @@
    "next_attempt_at": null,
    "count": 1,
    "http": {
-    "bytes": 4867,
+    "bytes": 4862,
     "last_status": 200,
     "etag": null,
     "last_modified": null
@@ -65,10 +65,11 @@
   "anglesea": {
    "name": "Anglesea Clinic (Hamilton)",
    "url": "https://angleseawaittimes.org.nz/waittimes.json",
-   "attempted_at": "2026-10-19T06:53:38Z",
+   "attempted_at": "2026-10-19T07:47:40Z",
    "status": "ok",
-   "fetched_at": "2026-10-19T06:53:38Z",
-   "last_success_at": "2026-10-19T06:53:38Z",
+   "not_modified": true,
+   "fetched_at": "2026-10-19T07:47:40Z",
+   "last_success_at": "2026-10-19T07:47:40Z",
    "source_updated_at": "2026-10-19T06:36:46Z",
    "source_updated_note": "HTTP Last-Modified of waittimes.json (updated irregularly)",
    "error": null,
@@ -76,8 +77,8 @@
    "next_attempt_at": null,
    "count": 1,
    "http": {
-    "bytes": 79,
-    "last_status": 200,
+    "bytes": 0,
+    "last_status": 304,
     "etag": "W/\"6ad5ba7e-5f\"",
     "last_modified": "Mon, 19 Oct 2026 06:36:46 GMT"
    }
@@ -101,7 +102,7 @@
     "label": "3/10 busyness"
    },
    "source": "whitecross",
-   "fetched_at": "2026-10-19T06:53:35Z",
+   "fetched_at": "2026-10-19T07:47:37Z",
    "stale": false,
    "source_updated_at": null
   },
@@ -112,17 +113,17 @@
    "kind": "urgent",
    "lat": -37.2082148,
    "lon": 174.9084778,
-   "is_open": true,
+   "is_open": false,
    "phone": "09 238 6610",
    "website": "https://www.whitecross.co.nz/clinics/franklin-urgent-care",
    "wait": {
     "type": "busyness",
-    "value": 1,
+    "value": 0,
     "scale_max": 10,
-    "label": "1/10 busyness"
+    "label": "0/10 busyness"
    },
    "source": "whitecross",
-   "fetched_at": "2026-10-19T06:53:35Z",
+   "fetched_at": "2026-10-19T07:47:37Z",
    "stale": false,
    "source_updated_at": null
   },
@@ -138,12 +139,12 @@
    "website": "https://www.whitecross.co.nz/clinics/henderson-24-7-uc",
    "wait": {
     "type": "busyness",
-    "value": 4,
+    "value": 7,
     "scale_max": 10,
-    "label": "4/10 busyness"
+    "label": "7/10 busyness"
    },
    "source": "whitecross",
-   "fetched_at": "2026-10-19T06:53:35Z",
+   "fetched_at": "2026-10-19T07:47:37Z",
    "stale": false,
    "source_updated_at": null
   },
@@ -154,7 +155,7 @@
    "kind": "urgent",
    "lat": -36.912289,
    "lon": 174.728237,
-   "is_open": true,
+   "is_open": false,
    "phone": "09 627 8552",
    "website": "https://www.whitecross.co.nz/clinics/mt-roskill-gp-urgent-care",
    "wait": {
@@ -164,7 +165,7 @@
     "label": "0/10 busyness"
    },
    "source": "whitecross",
-   "fetched_at": "2026-10-19T06:53:35Z",
+   "fetched_at": "2026-10-19T07:47:37Z",
    "stale": false,
    "source_updated_at": null
   },
@@ -185,7 +186,7 @@
     "label": "4/10 busyness"
    },
    "source": "whitecross",
-   "fetched_at": "2026-10-19T06:53:35Z",
+   "fetched_at": "2026-10-19T07:47:37Z",
    "stale": false,
    "source_updated_at": null
   },
@@ -196,17 +197,17 @@
    "kind": "urgent",
    "lat": -36.881544,
    "lon": 174.732052,
-   "is_open": true,
+   "is_open": false,
    "phone": "09 815 3111",
    "website": "https://www.whitecross.co.nz/clinics/st-lukes-uc",
    "wait": {
     "type": "busyness",
-    "value": 2,
+    "value": 0,
     "scale_max": 10,
-    "label": "2/10 busyness"
+    "label": "0/10 busyness"
    },
    "source": "whitecross",
-   "fetched_at": "2026-10-19T06:53:35Z",
+   "fetched_at": "2026-10-19T07:47:37Z",
    "stale": false,
    "source_updated_at": null
   },
@@ -217,17 +218,17 @@
    "kind": "urgent",
    "lat": -35.726629,
    "lon": 174.32647,
-   "is_open": true,
+   "is_open": false,
    "phone": "09 470 1083",
    "website": "https://www.whitecross.co.nz/clinics/whangarei-uc",
    "wait": {
     "type": "busyness",
-    "value": 1,
+    "value": 0,
     "scale_max": 10,
-    "label": "1/10 busyness"
+    "label": "0/10 busyness"
    },
    "source": "whitecross",
-   "fetched_at": "2026-10-19T06:53:35Z",
+   "fetched_at": "2026-10-19T07:47:37Z",
    "stale": false,
    "source_updated_at": null
   },
@@ -238,7 +239,7 @@
    "kind": "urgent",
    "lat": -36.780841,
    "lon": 174.721987,
-   "is_open": true,
+   "is_open": false,
    "phone": "09 444 4244 ext 3",
    "website": "https://www.whitecross.co.nz/clinics/glenfield-gp-uc-1",
    "wait": {
@@ -248,7 +249,7 @@
     "label": "0/10 busyness"
    },
    "source": "whitecross",
-   "fetched_at": "2026-10-19T06:53:35Z",
+   "fetched_at": "2026-10-19T07:47:37Z",
    "stale": false,
    "source_updated_at": null
   },
@@ -259,7 +260,7 @@
    "kind": "urgent",
    "lat": -36.888378,
    "lon": 174.831015,
-   "is_open": true,
+   "is_open": false,
    "phone": "09 570 8899",
    "website": "https://www.whitecross.co.nz/clinics/lunn-ave-gp-uc-1",
    "wait": {
@@ -269,7 +270,7 @@
     "label": "0/10 busyness"
    },
    "source": "whitecross",
-   "fetched_at": "2026-10-19T06:53:35Z",
+   "fetched_at": "2026-10-19T07:47:37Z",
    "stale": false,
    "source_updated_at": null
   },
@@ -280,17 +281,17 @@
    "kind": "urgent",
    "lat": -36.901454,
    "lon": 174.695829,
-   "is_open": true,
+   "is_open": false,
    "phone": "09 828 8912",
    "website": "https://www.whitecross.co.nz/clinics/new-lynn-gp-uc",
    "wait": {
     "type": "busyness",
-    "value": 1,
+    "value": 0,
     "scale_max": 10,
-    "label": "1/10 busyness"
+    "label": "0/10 busyness"
    },
    "source": "whitecross",
-   "fetched_at": "2026-10-19T06:53:35Z",
+   "fetched_at": "2026-10-19T07:47:37Z",
    "stale": false,
    "source_updated_at": null
   },
@@ -306,17 +307,17 @@
    "website": "https://www.24hoursurgery.co.nz/",
    "wait": {
     "type": "minutes",
-    "value": 180,
+    "value": 240,
     "approx_hours": true,
     "plus": false,
-    "label": "~3 h (less-urgent patients)"
+    "label": "~4 h (less-urgent patients)"
    },
-   "patients_waiting": 23,
+   "patients_waiting": 33,
    "in_treatment": 8,
-   "time_critical": 1,
-   "source_updated_at": "2026-10-19T06:53:00Z",
+   "time_critical": 3,
+   "source_updated_at": "2026-10-19T07:47:00Z",
    "source": "pegasus",
-   "fetched_at": "2026-10-19T06:53:36Z",
+   "fetched_at": "2026-10-19T07:47:38Z",
    "stale": false
   },
   {
@@ -325,18 +326,18 @@
    "kind": "urgent",
    "lat": -37.6892522,
    "lon": 176.1681636,
-   "is_open": true,
+   "is_open": false,
    "hours": "8am–8pm daily",
    "phone": "07 577 0010",
    "website": "https://www.accidenthealth.co.nz/",
    "wait": {
     "type": "minutes",
-    "value": 160,
-    "label": "2h 40m (non-urgent)"
+    "value": null,
+    "label": "Closed"
    },
-   "patients_waiting": 16,
+   "patients_waiting": null,
    "source": "accidenthealth",
-   "fetched_at": "2026-10-19T06:53:37Z",
+   "fetched_at": "2026-10-19T07:47:39Z",
    "stale": false,
    "source_updated_at": null
   },
@@ -359,7 +360,7 @@
    "patients_waiting": 24,
    "source_updated_at": "2026-10-19T06:36:46Z",
    "source": "anglesea",
-   "fetched_at": "2026-10-19T06:53:38Z",
+   "fetched_at": "2026-10-19T07:47:40Z",
    "stale": false
   }
  ],
