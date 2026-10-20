@@ -1,0 +1,3754 @@
+{
+ "generated": "2026-10-20T08:34:55Z",
+ "pharmacy_stats": {
+  "register_rows": 1097,
+  "osm_objects_with_name": 736,
+  "matched": 381,
+  "match_rate_pct": 34.7,
+  "by_tier": {
+   "A": 176,
+   "B": 204,
+   "C": 1
+  },
+  "rejected_ambiguous": {
+   "B": 35,
+   "A": 2,
+   "C": 1
+  },
+  "with_coordinates": 381,
+  "with_hours": 187,
+  "with_phone": 122,
+  "osm_unmatched_not_shown": 355
+ },
+ "medicine_stats": {
+  "chemicals": 806,
+  "brands": 1276,
+  "chemicals_fully_funded_any": 772,
+  "chemicals_partly_only": 24,
+  "chemicals_status_unknown": 10,
+  "chemicals_with_conditions": 379,
+  "chemicals_with_medsafe_links": 582,
+  "links": 1949,
+  "cmi_products_not_in_schedule": 281,
+  "immunisation_schedule_entries": 20
+ },
+ "sources": {
+  "medsafe_register_updated": "1 July 2026",
+  "medsafe_register_url": "https://www.medsafe.govt.nz/compliance/pharmacy-licence-register.asp",
+  "osm_base": "2026-10-20T07:20:10Z",
+  "pharmac_edition": "October 2026",
+  "pharmac_published": "2026-10-08",
+  "pharmac_file": "Schedule_2026-10.xml",
+  "pharmac_url": "https://schedule.pharmac.govt.nz/pub/schedule/archive/Schedule_2026-10.xml",
+  "cmi_index_revised": "19 October 2026",
+  "datasheet_index_revised": "19 October 2026"
+ },
+ "matching_method": [
+  "Master list = every row of the Medsafe Pharmacy Licence Register (official). OSM is only used to add coordinates, opening_hours and phone.",
+  "Names/addresses are folded (lower case, macrons removed, & -> and, street suffix abbreviations expanded).",
+  "Tier A (address): OSM addr:housenumber + addr:street equal a number+street in the register address, no postcode conflict, AND (same postcode OR the address contains an OSM place name near the OSM point OR name similarity >= 0.34 OR same chain brand).",
+  "Tier B (name + locality): distinctive-name Jaccard similarity >= 0.67 (generic words like pharmacy/chemist/unichem/life removed), the register address contains the name of an OSM place within 2-20 km of the OSM point (radius by place type), no postcode or street conflict.",
+  "Tier C (name + street): similarity >= 0.5, same street name, locality check passes, no postcode conflict.",
+  "One-to-one greedy assignment by score; if another candidate scores within 0.25 the pair is REJECTED as ambiguous (except duplicate OSM objects < 150 m apart).",
+  "Unmatched register rows are shown without a map position, grouped by Health NZ district. Unmatched OSM objects are NOT shown (not verifiable against the register)."
+ ],
+ "matches": [
+  {
+   "tier": "A",
+   "register": "Unichem 218 Ponsonby Pharmacy",
+   "reg_addr": "218 Ponsonby Road Ponsonby Auckland 1011",
+   "osm": "Unichem",
+   "osm_id": "n675423011",
+   "osm_addr": "218 ponsonby road 1011",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Unichem Queen Street Pharmacy",
+   "reg_addr": "262 Queen Street Auckland Central Auckland 1010",
+   "osm": "Unichem",
+   "osm_id": "n317678724",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Mercury Bay Pharmacy",
+   "reg_addr": "28 Albert Street Whitianga Waikato 3510",
+   "osm": "Mercury Bay Pharmacy",
+   "osm_id": "n11728680277",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Gordon's Pharmacy",
+   "reg_addr": "1 Mangapapa Road Mangapapa Gisborne 4010",
+   "osm": "Gordon's Pharmacy",
+   "osm_id": "w1465251375",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Takapuna Pharmacy",
+   "reg_addr": "463 Lake Road Takapuna Auckland 0622",
+   "osm": "Takapuna Pharmacy",
+   "osm_id": "n13819755305",
+   "osm_addr": "lake road",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Andrew Spence Pharmacy",
+   "reg_addr": "30 Maadi Road Onekawa Napier 4110",
+   "osm": "Andrew Spence Pharmacy",
+   "osm_id": "w343556542",
+   "osm_addr": "30 maadi road",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Greenmeadows Pharmacy",
+   "reg_addr": "34 Gloucester Street Greenmeadows Napier 4112",
+   "osm": "Greenmeadows Pharmacy",
+   "osm_id": "n4349474424",
+   "osm_addr": "34 gloucester street 4112",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Marewa Pharmacy",
+   "reg_addr": "104 Kennedy Road Marewa Napier 4110",
+   "osm": "Marewa Pharmacy",
+   "osm_id": "w343374800",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "St Heliers Pharmacy",
+   "reg_addr": "12 Polygon Road, St Heliers, Auckland, 1071",
+   "osm": "St Heliers Pharmacy",
+   "osm_id": "n14086658913",
+   "osm_addr": "12 polygon road 1071",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Addington Pharmacy",
+   "reg_addr": "348 Lincoln Road Addington Christchurch 8024",
+   "osm": "The Pharmacy @ Addington",
+   "osm_id": "n4583901793",
+   "osm_addr": "348 lincoln road 8024",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Medicines to Midnight",
+   "reg_addr": "Shop 3, 160 Broadway Newmarket Auckland 1023",
+   "osm": "Medicines to Midnight",
+   "osm_id": "n3197899110",
+   "osm_addr": "broadway",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Ahuriri Pharmacy",
+   "reg_addr": "Shop 1/91 Bridge Street, Ahuriri, Napier, 4110",
+   "osm": "Ahuriri Pharmacy",
+   "osm_id": "w451789313",
+   "osm_addr": "1 91 bridge street 4110",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Albany Street Pharmacy Limited",
+   "reg_addr": "27 Albany Street, North Dunedin, Dunedin 9016",
+   "osm": "Albany St Pharmacy",
+   "osm_id": "n5255062833",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Airport Oaks Pharmacy",
+   "reg_addr": "149C Kirkbride Road, Mangere, Auckland, 2022",
+   "osm": "Airport Oaks Pharmacy",
+   "osm_id": "n10202646696",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Frankton Pharmacy",
+   "reg_addr": "161-163 Commerce Street, Frankton, Hamilton, 3204",
+   "osm": "Frankton Pharmacy",
+   "osm_id": "n2930671357",
+   "osm_addr": "161 commerce street",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Royal Heights Pharmacy",
+   "reg_addr": "Shops 7 & 10, 138 Royal Road, Massey, Auckland, 0614",
+   "osm": "Royal Heights Pharmacy",
+   "osm_id": "n4925896197",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Kendal Pharmacy",
+   "reg_addr": "64 Kendal Avenue, Burnside, Christchurch, 8053",
+   "osm": "Kendal Pharmacy",
+   "osm_id": "n5256869906",
+   "osm_addr": "64 kendal avenue 8053",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Edgecumbe Pharmacy",
+   "reg_addr": "Shop 2, Riverslea Mall 26 College Road Edgecumbe 3120",
+   "osm": "Edgecumbe Pharmacy",
+   "osm_id": "n10695984641",
+   "osm_addr": "riverslea mall college road 3120",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Allen's Village Pharmacy Limited",
+   "reg_addr": "Kumeu Village 88 Main Road Kumeu 0810",
+   "osm": "Allen's Village Pharmacy",
+   "osm_id": "n1997864914",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Clive Pharmacy",
+   "reg_addr": "185 Main Road Clive 4102",
+   "osm": "Clive Pharmacy",
+   "osm_id": "n6150886235",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Antidote Meridian",
+   "reg_addr": "Shop G10A, Meridian Mall 285 George Street Dunedin Central Dunedin 9016",
+   "osm": "Antidote Meridian",
+   "osm_id": "n9111110882",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Opotiki Pharmacy",
+   "reg_addr": "110 Church Street, Opotiki, 3122",
+   "osm": "Opotiki Pharmacy",
+   "osm_id": "n6942427994",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Mountainview Pharmacy",
+   "reg_addr": "65 Victoria Street, Hawera, 4610",
+   "osm": "Mountainview Pharmacy",
+   "osm_id": "n13239693558",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Opunake Pharmacy",
+   "reg_addr": "26 Napier Street, Opunake, 4616",
+   "osm": "Opunake Pharmacy",
+   "osm_id": "n13325793578",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Pharmacy @ Carefirst",
+   "reg_addr": "99 Tukapa Street, Westown, New Plymouth, 4310",
+   "osm": "Carefirst Pharmacy",
+   "osm_id": "n4584784605",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Patea Pharmacy",
+   "reg_addr": "71 Egmont Street PATEA 4520",
+   "osm": "Patea Pharmacy",
+   "osm_id": "n11512227418",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Aramoho Pharmacy",
+   "reg_addr": "142 Somme Parade, Aramoho, Whanganui, 4500",
+   "osm": "Aramoho Pharmacy",
+   "osm_id": "n4646787825",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Netpharmacy",
+   "reg_addr": "109 Parnell Road, Parnell, Auckland, 1052",
+   "osm": "netpharmacy",
+   "osm_id": "n2660340518",
+   "osm_addr": "parnell road",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Newlands Pharmacy",
+   "reg_addr": "Shop 8, 33 McMillan Court Newlands Wellington 6037",
+   "osm": "Newlands Pharmacy",
+   "osm_id": "n14130085501",
+   "osm_addr": "33 mcmillan court",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Paihia Pharmacy",
+   "reg_addr": "4 Williams Road, Paihia, 0200",
+   "osm": "Paihia Pharmacy",
+   "osm_id": "n3410973731",
+   "osm_addr": "4 williams road",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Bargain Chemist Northwood",
+   "reg_addr": "Unit I, Supa Centa 1 Radcliffe Road Belfast Christchurch 8051",
+   "osm": "Bargain Chemist",
+   "osm_id": "w1246195405",
+   "osm_addr": "1 radcliffe road 8051",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Bargain Chemist George St",
+   "reg_addr": "300 George Street, Dunedin Central, Dunedin, 9016",
+   "osm": "Bargain Chemist",
+   "osm_id": "n900124705",
+   "osm_addr": "300 george street 9016",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Bargain Chemist Tower Junction",
+   "reg_addr": "Unit 10, Tower Junction Mega Centre, 66 Clarence Street, Addington, Christchurch, 8011",
+   "osm": "Bargain Chemist",
+   "osm_id": "w1116476390",
+   "osm_addr": "10 66 clarence street 8011",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Bargain Chemist New Plymouth Central",
+   "reg_addr": "173 Courtenay Street New Plymouth 4310",
+   "osm": "Bargain Chemist",
+   "osm_id": "n14278707414",
+   "osm_addr": "173 courtenay street 4310",
+   "score": 3.5
+  },
+  {
+   "tier": "A",
+   "register": "Bargain Chemist Pukekohe",
+   "reg_addr": "Unit G, 16 Wrightson Way, Pukekohe, 2120",
+   "osm": "Bargain Chemist",
+   "osm_id": "n14040558104",
+   "osm_addr": "16 wrightson way 2120",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Bargain Chemist Westgate",
+   "reg_addr": "6 Kakano Road, Westgate, Auckland, 0814",
+   "osm": "Bargain Chemist",
+   "osm_id": "w1557508286",
+   "osm_addr": "6 kakano road 0814",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Bargain Chemist Te Awamutu",
+   "reg_addr": "Unit A, 39 Rewi Street Te Awamutu 3800",
+   "osm": "Bargain Chemist",
+   "osm_id": "n14165333613",
+   "osm_addr": "39 rewi street 3800",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Bargain Chemist Rotorua",
+   "reg_addr": "Rotorua Central Mall, Shop 4G, 1170 Amohau Street, Rotorua, 3010",
+   "osm": "Bargain Chemist",
+   "osm_id": "n14137834802",
+   "osm_addr": "1170 amohau street 3010",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Bargain Chemist Upper Hutt",
+   "reg_addr": "Tenancy 1, 7-11 Queen Street Upper Hutt 5018",
+   "osm": "Bargain Chemist",
+   "osm_id": "n14165336380",
+   "osm_addr": "11 queen street 5018",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Bargain Chemist Mt Roskill",
+   "reg_addr": "Unit 2, 6 Carr Road Mount Roskill Auckland 1042",
+   "osm": "Bargain Chemist",
+   "osm_id": "n13898127604",
+   "osm_addr": "8 carr road 1042",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Bargain Chemist Rolleston",
+   "reg_addr": "3/1 Rohutu Way, Rolleston, 7614",
+   "osm": "Bargain Chemist",
+   "osm_id": "n12609031614",
+   "osm_addr": "3 1 rohutu way 7614",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Bargain Chemist Rangiora",
+   "reg_addr": "Unit 1, 10-12 Queen Street Rangiora 7400",
+   "osm": "Bargain Chemist",
+   "osm_id": "w320154342",
+   "osm_addr": "10 12 queen street 7400",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Bargain Chemist Mt Wellington",
+   "reg_addr": "Mount Wellington Shopping Centre, Shops 7-9, 295 Penrose Road, Mount Wellington, Auckland, 1060",
+   "osm": "Bargain Chemist",
+   "osm_id": "n14278864213",
+   "osm_addr": "9 295 penrose road 1060",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Bargain Chemist Hornby",
+   "reg_addr": "Shop 6, Hornby Mega Centre 6 Chappie Place Hornby Christchurch 8042",
+   "osm": "Bargain Chemist",
+   "osm_id": "n10732204654",
+   "osm_addr": "6 chappie place 8042",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Bargain Chemist Eastgate",
+   "reg_addr": "Tenancy 602, Eastgate Shopping Centre 20 Buckleys Road Linwood Christchurch 8062",
+   "osm": "Bargain Chemist",
+   "osm_id": "n9357621619",
+   "osm_addr": "20 buckleys road 8062",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Bargain Chemist Shirley",
+   "reg_addr": "Shop E, Homebase Centre 195-201 Marshland Road Shirley Christchurch 8083",
+   "osm": "Bargain Chemist",
+   "osm_id": "w1259160313",
+   "osm_addr": "201 marshland road 8083",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Bargain Chemist Manukau",
+   "reg_addr": "Unit 212, Manukau Supa Centa, Corner Cavendish & Lambie Drives, Manukau, Auckland, 2104",
+   "osm": "Bargain Chemist",
+   "osm_id": "w976138695",
+   "osm_addr": "72 cavendish drive 2104",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Bargain Chemist Papanui",
+   "reg_addr": "Unit B3, NorthLink Centre 100 Langdons Road Papanui Christchurch 8052",
+   "osm": "Bargain Chemist",
+   "osm_id": "n7911820418",
+   "osm_addr": "100 langdons road 8052",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Bargain Chemist Porirua",
+   "reg_addr": "Shop 3, Mega Centre 24 Parumoana Street Porirua City Centre Porirua 5022",
+   "osm": "Bargain Chemist",
+   "osm_id": "n5683566700",
+   "osm_addr": "24 parumoana street 5022",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Bays Health Pharmacy",
+   "reg_addr": "13-15 Bute Road Browns Bay Auckland 0630",
+   "osm": "Bays Health Pharmacy",
+   "osm_id": "n14294683706",
+   "osm_addr": "13 15 bute road",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Bargain Chemist South Dunedin",
+   "reg_addr": "444 Andersons Bay Road South Dunedin Dunedin 9012",
+   "osm": "Bargain Chemist",
+   "osm_id": "w381669409",
+   "osm_addr": "444 andersons bay road 9012",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Unichem Beachlands Pharmacy",
+   "reg_addr": "43 Wakelin Road, Beachlands, Auckland, 2018",
+   "osm": "Beachlands Unichem Pharmacy",
+   "osm_id": "n3577963842",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Bealey Ave Pharmacy",
+   "reg_addr": "Unit 3, 212 Bealey Avenue, Christchurch Central, Christchurch, 8013",
+   "osm": "Unichem",
+   "osm_id": "n9657309409",
+   "osm_addr": "212 bealey avenue 8013",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Lyttelton Pharmacy & Post Centre",
+   "reg_addr": "19 London Street LYTTELTON 8082",
+   "osm": "Lyttelton Pharmacy",
+   "osm_id": "w277178543",
+   "osm_addr": "19 london street 8082",
+   "score": 3.5
+  },
+  {
+   "tier": "B",
+   "register": "Belmont Pharmacy",
+   "reg_addr": "143 Lake Road Belmont Auckland 0622",
+   "osm": "Belmont Pharmacy",
+   "osm_id": "n3483349733",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Bentley Ave Pharmacy Limited",
+   "reg_addr": "Shop 7, 111 Bentley Avenue Glenfield Auckland 0629",
+   "osm": "Bentley Avenue Pharmacy",
+   "osm_id": "n3457014224",
+   "osm_addr": "7 111 bentley avenue",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Best Care Pharmacy",
+   "reg_addr": "3 / 135 Pakuranga Road Pakuranga Auckland 2010",
+   "osm": "Best Care Pharmacy",
+   "osm_id": "n12590431420",
+   "osm_addr": "3 135 pakuranga road 2010",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Life Pharmacy Birkenhead",
+   "reg_addr": "32 Mokoia Road, Birkenhead, Auckland, 0626",
+   "osm": "Life Pharmacy",
+   "osm_id": "n9884092427",
+   "osm_addr": "32 mokoia road 0626",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Unichem Botany Pharmacy",
+   "reg_addr": "Botany Medical and Urgent Care, Botany Town Centre 2 Market Square East Tamaki Auckland 2013",
+   "osm": "Unichem",
+   "osm_id": "n14161730874",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Botany Road Pharmacy Limited",
+   "reg_addr": "Unit M 301 Botany Road Golflands AUCKLAND 2013",
+   "osm": "Botany Road Pharmacy",
+   "osm_id": "n1278851304",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Brown's Community Pharmacy",
+   "reg_addr": "89-91 Commerce Street Kaitaia 0410",
+   "osm": "Brown's Community Pharmacy",
+   "osm_id": "n5430511801",
+   "osm_addr": "89 commerce street",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Unichem Buchanan's Pharmacy",
+   "reg_addr": "Shops 1-5, Paramount Plaza, 81 Paramount Parade, Tikipunga, Whangarei 0112",
+   "osm": "Unichem",
+   "osm_id": "n9872195129",
+   "osm_addr": "81 paramount plaza",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Burns Pharmacy (1991) Limited",
+   "reg_addr": "292 Jackson Street, Petone, Lower Hutt, 5012",
+   "osm": "Burns Pharmacy",
+   "osm_id": "n2197217967",
+   "osm_addr": "292 jackson street 5012",
+   "score": 3.5
+  },
+  {
+   "tier": "B",
+   "register": "Burwood Pharmacy",
+   "reg_addr": "11 Parnwell Street Burwood Christchurch 8083",
+   "osm": "Burwood Pharmacy",
+   "osm_id": "n960912226",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "David's Pharmacy",
+   "reg_addr": "4/6 Three Mile Bush Road Te Kamo WHANGAREI 0112",
+   "osm": "David's Pharmacy",
+   "osm_id": "n14097990223",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Coast Care Pharmacy",
+   "reg_addr": "72 East Coast Road Milford Auckland 0620",
+   "osm": "Coast Care Pharmacy",
+   "osm_id": "n5038449834",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Picton Healthcare Pharmacy",
+   "reg_addr": "6 High Street Picton 7220",
+   "osm": "Picton Healthcare Pharmacy",
+   "osm_id": "n5616141069",
+   "osm_addr": "6 high street 7220",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Glenview Pharmacy",
+   "reg_addr": "143 Ohaupo Road, Melville, Hamilton, 3206",
+   "osm": "Unichem",
+   "osm_id": "n4507804336",
+   "osm_addr": "143 ohaupo road",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Pharmacy Waipukurau",
+   "reg_addr": "125 Ruataniwha Street Waipukurau 4200",
+   "osm": "Unichem Waipukurau Pharmacy",
+   "osm_id": "n5623189787",
+   "osm_addr": "125 ruataniwha street",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Clevedon Village Pharmacy",
+   "reg_addr": "Shop 1, 9 Papakura-Clevedon Road Rd 2 Papakura 2582",
+   "osm": "Clevedon Village Pharmacy",
+   "osm_id": "n5369795574",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Cambridge Pharmacy",
+   "reg_addr": "52 Victoria Street Cambridge 3434",
+   "osm": "Unichem",
+   "osm_id": "n5426327198",
+   "osm_addr": "52 victoria street 3434",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Greytown Pharmacy",
+   "reg_addr": "North Shop, 86 Main Street Greytown 5712",
+   "osm": "Greytown Pharmacy",
+   "osm_id": "n1789195175",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Unichem Pakuranga Pharmacy",
+   "reg_addr": "11-13 Cortina Place Pakuranga Auckland 2010",
+   "osm": "Unichem",
+   "osm_id": "n12759173437",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Your Pharmacy Mount Maunganui",
+   "reg_addr": "6 Grenada Street Mount Maunganui 3116",
+   "osm": "Your Pharmacy Mount Maunganui",
+   "osm_id": "n10127627560",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Glen Eden Pharmacy",
+   "reg_addr": "226 West Coast Road Glen Eden AUCKLAND 0602",
+   "osm": "Glen Eden Pharmacy",
+   "osm_id": "n5141828304",
+   "osm_addr": "226 west coast road",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Tuakau Pharmacy",
+   "reg_addr": "51-53 George Street TUAKAU 2121",
+   "osm": "Unichem",
+   "osm_id": "n4741046008",
+   "osm_addr": "53 george street 2121",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Unichem 115 Queen Street Pharmacy",
+   "reg_addr": "115 Queen Street, Auckland Central, Auckland, 1010",
+   "osm": "Unichem",
+   "osm_id": "n12585429718",
+   "osm_addr": "unit b 109 queen street",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Marton Pharmacy",
+   "reg_addr": "292 Broadway Marton 4710",
+   "osm": "Marton Pharmacy Ltd",
+   "osm_id": "n2110231147",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Life Pharmacy Merivale",
+   "reg_addr": "193 Papanui Road Merivale Christchurch 8014",
+   "osm": "Life Pharmacy",
+   "osm_id": "n9189757291",
+   "osm_addr": "193 papanui road 8014",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Clive's Chemist",
+   "reg_addr": "20 - 21 Queen Street Wainuiomata Lower Hutt 5014",
+   "osm": "Clive's Chemist",
+   "osm_id": "w380725268",
+   "osm_addr": "20 21 queen street",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "The Capsule Pharmacy",
+   "reg_addr": "Shops 6 & 7, 231-233 Great South Road Drury Auckland 2113",
+   "osm": "The Capsule",
+   "osm_id": "n11457541022",
+   "osm_addr": "7a 233 great south road 2113",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Comins Pharmacy Limited",
+   "reg_addr": "67 Victoria Street Cambridge 3434",
+   "osm": "Comins Pharmacy",
+   "osm_id": "n5426327199",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Commodore Pharmacy",
+   "reg_addr": "52 Clyde Road Browns Bay Auckland 0630",
+   "osm": "Commodore Pharmacy",
+   "osm_id": "n14288433301",
+   "osm_addr": "clyde road",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Wises Community Pharmacy",
+   "reg_addr": "Shop 4, 155 Wills Street Ashburton 7700",
+   "osm": "Wises Pharmacy",
+   "osm_id": "n13425491809",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Connolly Street Pharmacy",
+   "reg_addr": "Shop 3, 2 Connolly Street, Hutt Central, Lower Hutt, 5010",
+   "osm": "Connolly St Pharmacy",
+   "osm_id": "n6484907368",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Caversham Pharmacy",
+   "reg_addr": "287 South Road Caversham Dunedin 9012",
+   "osm": "Caversham Pharmacy",
+   "osm_id": "n13380349402",
+   "osm_addr": "287 south road 9012",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Cox's 7 Day Pharmacy",
+   "reg_addr": "2 Mayfair Place Glen Innes Auckland 1072",
+   "osm": "Unichem",
+   "osm_id": "n12585425522",
+   "osm_addr": "2 mayfair place 1072",
+   "score": 3.5
+  },
+  {
+   "tier": "A",
+   "register": "Cranwell's Pharmacy (2011) Limited",
+   "reg_addr": "573 Remuera Road Remuera Auckland 1050",
+   "osm": "Cranwells Pharmacy",
+   "osm_id": "n4989734841",
+   "osm_addr": "573 remuera road",
+   "score": 3.5
+  },
+  {
+   "tier": "B",
+   "register": "Sumner Pharmacy",
+   "reg_addr": "17 Wakefield Avenue Sumner CHRISTCHURCH 8081",
+   "osm": "Sumner Pharmacy",
+   "osm_id": "w400536259",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Henderson Valley Pharmacy",
+   "reg_addr": "249 Henderson Valley Road Henderson Auckland 0612",
+   "osm": "Henderson Valley Pharmacy",
+   "osm_id": "n4883148694",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Davies Corner Pharmacy",
+   "reg_addr": "29 Hukanui Road, Fairfield, Hamilton, 3214",
+   "osm": "Unichem",
+   "osm_id": "n866573042",
+   "osm_addr": "29 hukanui road",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Devonport Health Centre Pharmacy",
+   "reg_addr": "20 Victoria Road Devonport Auckland 0624",
+   "osm": "Devonport Pharmacy",
+   "osm_id": "w1009039401",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Dinsdale Pharmacy",
+   "reg_addr": "27C Whatawhata Road Dinsdale HAMILTON 3204",
+   "osm": "Dinsdale Pharmacy",
+   "osm_id": "n1246437406",
+   "osm_addr": "27 whatawhata road",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Dominion Road Pharmacy",
+   "reg_addr": "123D Dominion Road Mount Eden AUCKLAND 1024",
+   "osm": "Dominion Road Pharmacy",
+   "osm_id": "n3508008270",
+   "osm_addr": "dominion road",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Dunedin City Pharmacy Limited",
+   "reg_addr": "22 Princes Street Dunedin Central Dunedin 9010",
+   "osm": "Dunedin City Pharmacy",
+   "osm_id": "n3456247849",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Pahiatua Pharmacy",
+   "reg_addr": "123 Main Street, Pahiatua, 4910",
+   "osm": "Pahiatua Pharmacy",
+   "osm_id": "n13312398962",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Ellerslie Pharmacy",
+   "reg_addr": "125 Main Highway, Ellerslie, Auckland 1051",
+   "osm": "Unichem",
+   "osm_id": "n4939845042",
+   "osm_addr": "125b main highway 1051",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Eden Quarter Pharmacy",
+   "reg_addr": "Shop 9B, 296A Dominion Road, Mount Eden, Auckland, 1024",
+   "osm": "Unichem",
+   "osm_id": "n61078264",
+   "osm_addr": "296a dominion road",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "East Tamaki Pharmacy",
+   "reg_addr": "277 East Tamaki Road Otara Auckland 2023",
+   "osm": "East Tamaki Pharmacy",
+   "osm_id": "n3674831978",
+   "osm_addr": "east tamaki road",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Eastbourne Pharmacy",
+   "reg_addr": "5 Rimu Street Eastbourne LOWER HUTT 5013",
+   "osm": "Eastbourne Pharmacy",
+   "osm_id": "n7841556377",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Life Pharmacy Eastridge",
+   "reg_addr": "Shop 24, Eastridge Mall 215 Kepa Road Mission Bay Auckland 1071",
+   "osm": "Unichem",
+   "osm_id": "n1404369573",
+   "osm_addr": "215 kepa road 1071",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Millhouse Pharmacy",
+   "reg_addr": "Unit 1 128 Millhouse Drive Northpark Auckland 2013",
+   "osm": "Millhouse Pharmacy",
+   "osm_id": "n5314339349",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "The Pharmacy @ Phillipstown",
+   "reg_addr": "270 Ferry Road Waltham Christchurch 8011",
+   "osm": "The Pharmacy @ Phillipstown",
+   "osm_id": "n4757540926",
+   "osm_addr": "270 ferry road 8011",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Auckland Central Pharmacy",
+   "reg_addr": "Shop 203, 28 College Hill, Freemans Bay, Auckland, 1011",
+   "osm": "Auckland Central Pharmacy",
+   "osm_id": "w1220615032",
+   "osm_addr": "202 28 college hill 1011",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Buller Pharmacy",
+   "reg_addr": "168 Palmerston Street Westport 7825",
+   "osm": "Buller Pharmacy",
+   "osm_id": "n2600863569",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Elmwood Pharmacy",
+   "reg_addr": "3 Normans Road, Strowan, Christchurch, 8052",
+   "osm": "Unichem",
+   "osm_id": "n9139497773",
+   "osm_addr": "3 normans road 8052",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Remedy Pharmacy - St Albans",
+   "reg_addr": "250 Springfield Road St Albans Christchurch 8014",
+   "osm": "Remedy Pharmacy St Albans",
+   "osm_id": "w902855566",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Epsom Kiwi Chemist",
+   "reg_addr": "Shop 1, Level 1, 272 Manukau Road, Epsom, Auckland, 1023",
+   "osm": "Epsom Pharmacy",
+   "osm_id": "n2976586278",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Beerescourt Pharmacy",
+   "reg_addr": "1365 Victoria Street Beerescourt Hamilton 3200",
+   "osm": "Unichem",
+   "osm_id": "n3406674221",
+   "osm_addr": "1365 victoria street",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Dispensary Plus Pharmacy Birkenhead",
+   "reg_addr": "4 Rawene Road Birkenhead AUCKLAND 0626",
+   "osm": "Dispensary Plus",
+   "osm_id": "n14256591516",
+   "osm_addr": "4 rawene road",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Manurewa Pharmacy",
+   "reg_addr": "198-200 Great South Road, Manurewa, Auckland, 2102",
+   "osm": "Unichem",
+   "osm_id": "n468079725",
+   "osm_addr": "200 great south road 2102",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Hillcrest Healthcare Pharmacy",
+   "reg_addr": "153 Cambridge Road Hillcrest Hamilton 3216",
+   "osm": "Hillcrest Healthcare Pharmacy",
+   "osm_id": "n2718605282",
+   "osm_addr": "153 cambridge road 3216",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Healthcare Pharmacy Rosedale",
+   "reg_addr": "1/96 Rosedale Road Rosedale Auckland 0632",
+   "osm": "Healthcare Pharmacy Rosedale",
+   "osm_id": "n5513564449",
+   "osm_addr": "17 94 rosedale road",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Far North Pharmacy",
+   "reg_addr": "53 Commerce Street Kaitaia 0410",
+   "osm": "Far North Pharmacy",
+   "osm_id": "n7489943874",
+   "osm_addr": "53 commerce street",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Hillsborough Pharmacy",
+   "reg_addr": "163A Hillsborough Road Hillsborough Auckland 1042",
+   "osm": "Hillsborough Pharmacy",
+   "osm_id": "n291722110",
+   "osm_addr": "163a hillsborough road 1042",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Fendalton Mall Pharmacy",
+   "reg_addr": "Fendalton Mall Shop 2, 19 - 23 Memorial Avenue Ilam Christchurch 8053",
+   "osm": "Fendalton Mall Pharmacy",
+   "osm_id": "n11135855358",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Pharmacy @ Ferrymead",
+   "reg_addr": "Units 1 & 2, Stage 2 Building 1005 Ferry Road Ferrymead CHRISTCHURCH 8023",
+   "osm": "Pharmacy @ Ferrymead",
+   "osm_id": "n13617033220",
+   "osm_addr": "1005 ferry road 8023",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Fiordland Community Pharmacy",
+   "reg_addr": "70B Town Centre Te Anau SOUTHLAND 9600",
+   "osm": "Fiordland Community Pharmacy",
+   "osm_id": "n2553055291",
+   "osm_addr": "70b town centre",
+   "score": 4.0
+  },
+  {
+   "tier": "C",
+   "register": "Five Mile Pharmacy Queenstown",
+   "reg_addr": "Shop 7, 32 Grant Road Frankton Queenstown 9300",
+   "osm": "Five Mile Pharmacy",
+   "osm_id": "n4582158289",
+   "osm_addr": "8 32 grant road",
+   "score": 2.17
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Flagstaff Pharmacy",
+   "reg_addr": "1158 River Road Flagstaff HAMILTON 3210",
+   "osm": "Unichem",
+   "osm_id": "n1661647042",
+   "osm_addr": "1158 river road 3210",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Flaxmere Pharmacy",
+   "reg_addr": "Shop 12,  Flaxmere Village Swansea Road Flaxmere HASTINGS 4120",
+   "osm": "Flaxmere Pharmacy",
+   "osm_id": "n12809013400",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Forrest Hill Family Pharmacy",
+   "reg_addr": "Shop 7/1 Grenada Avenue Forrest Hill Auckland 0620",
+   "osm": "Forrest Hill Pharmacy",
+   "osm_id": "n5047602365",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Freemans Bay Pharmacy",
+   "reg_addr": "Shop 1, 100 Wellington Street Freemans Bay AUCKLAND 1011",
+   "osm": "Freemans Bay Pharmacy",
+   "osm_id": "n967755133",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Fry's Pharmacy",
+   "reg_addr": "Ground Floor Suite 3, 355 Lower Queen Street RICHMOND 7020",
+   "osm": "Fry's Pharmacy",
+   "osm_id": "n1492971519",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Woolworths Pharmacy Lynfield",
+   "reg_addr": "570 Hillsborough Road Mount Roskill Auckland 1041",
+   "osm": "Woolworths Pharmacy",
+   "osm_id": "n12678183569",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Woolworths Pharmacy Takapuna",
+   "reg_addr": "10 Barrys Point Road, Takapuna, Auckland, 0622",
+   "osm": "Uni-Health Pharmacy",
+   "osm_id": "n3483285037",
+   "osm_addr": "10 barrys point road",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Hoon Hay Pharmacy",
+   "reg_addr": "120 Sparks Road, Hoon Hay, Christchurch, 8025",
+   "osm": "Hoon Hay Pharmacy",
+   "osm_id": "n4928266722",
+   "osm_addr": "120 sparks road 8025",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Gary Logan Pharmacy Limited",
+   "reg_addr": "121 King Street Pukekohe Auckland 2120",
+   "osm": "Gary Logan Pharmacy",
+   "osm_id": "n4583601134",
+   "osm_addr": "121 king street",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Geraldine Pharmacy",
+   "reg_addr": "22 & 24 Talbot Street Geraldine 7930",
+   "osm": "Geraldine Pharmacy",
+   "osm_id": "n11953288898",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Gladstone Pharmacy",
+   "reg_addr": "72 Gladstone Road Parnell Auckland 1052",
+   "osm": "Gladstone Pharmacy",
+   "osm_id": "n4994486189",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Glendene Pharmacy",
+   "reg_addr": "Shop 1a, 4343 Great North Road, Glendene, Auckland, 0602",
+   "osm": "Unichem",
+   "osm_id": "n4910282472",
+   "osm_addr": "4343 great north road 0602",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Glenfield 7 Day Pharmacy",
+   "reg_addr": "5/407 Glenfield Road Glenfield Auckland 0629",
+   "osm": "Glenfield 7 Day Pharmacy",
+   "osm_id": "n3431091028",
+   "osm_addr": "5 407 glenfield road 0629",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Unichem Dennis Hanna Pharmacy",
+   "reg_addr": "Shop 1, 575 Glenfield Road Glenfield Auckland 0629",
+   "osm": "Unichem",
+   "osm_id": "n3431072674",
+   "osm_addr": "1 575 glenfield road 0629",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Glenns Pharmacy Limited",
+   "reg_addr": "245 Gloucester Street Taradale NAPIER 4112",
+   "osm": "Glenns Pharmacy",
+   "osm_id": "w455194966",
+   "osm_addr": "245 gloucester street 4112",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Gonville Health Pharmacy Limited",
+   "reg_addr": "44 Abbot Street Gonville Whanganui 4501",
+   "osm": "Gonville Health Pharmacy",
+   "osm_id": "n4641601501",
+   "osm_addr": "44 abbot street",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Gopal's Pharmacy Limited",
+   "reg_addr": "553 Great North Road Grey Lynn Auckland 1021",
+   "osm": "Chemist",
+   "osm_id": "n13927404601",
+   "osm_addr": "553 great north road 1021",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Unichem Central Pharmacy Mosgiel",
+   "reg_addr": "130 Gordon Road Mosgiel 9024",
+   "osm": "Unichem",
+   "osm_id": "n2697107785",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Waihemo Pharmacy",
+   "reg_addr": "132 Ronaldsay Street PALMERSTON 9340",
+   "osm": "Waihemo Pharmacy",
+   "osm_id": "n5640593417",
+   "osm_addr": "130 ronaldsay street",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Grafton Pharmacy",
+   "reg_addr": "29-31 Park Road Grafton Auckland 1023",
+   "osm": "Grafton Pharmacy",
+   "osm_id": "n1735476051",
+   "osm_addr": "29 park road",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "West Hamilton Pharmacy",
+   "reg_addr": "Unit D, New Nawton Shopping Centre, 66 Hyde Avenue, Nawton, Hamilton, 3200",
+   "osm": "West Hamilton Pharmacy",
+   "osm_id": "n4973224941",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Green Bay Pharmacy",
+   "reg_addr": "62 Godley Road, Green Bay, Auckland, 0604",
+   "osm": "Green Bay Pharmacy",
+   "osm_id": "n3879177619",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Grey Lynn Pharmacy",
+   "reg_addr": "580 Great North Road Grey Lynn AUCKLAND 1021",
+   "osm": "Unichem",
+   "osm_id": "n5116587388",
+   "osm_addr": "580 great north road",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Life Pharmacy Papakura",
+   "reg_addr": "Roselands Shopping Centre, 1/94 and 96-98 Great South Road, Papakura, 2110",
+   "osm": "Life Pharmacy",
+   "osm_id": "n5013799348",
+   "osm_addr": "96 great south road 2110",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Otaika Pharmacy",
+   "reg_addr": "Shop 2 & 3, Otaika Shopping Centre 147a Otaika Road Raumanga Whangarei 0110",
+   "osm": "Otaika Pharmacy Care",
+   "osm_id": "n11034916583",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Unichem Harris Road Pharmacy",
+   "reg_addr": "Shop 7/2 Harris Road Mount Wellington Auckland 1051",
+   "osm": "Harris Road Pharmacy",
+   "osm_id": "n4939845113",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Hamilton East Pharmacy",
+   "reg_addr": "14 Beale Street Hamilton East HAMILTON 3216",
+   "osm": "Hamilton East Pharmacy",
+   "osm_id": "n1792723185",
+   "osm_addr": "14 beale street 3216",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Unichem Cuba Mall Pharmacy",
+   "reg_addr": "122 Cuba Street, Te Aro, Wellington, 6011",
+   "osm": "Unichem",
+   "osm_id": "n280666159",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Cashmere Pharmacy",
+   "reg_addr": "91 Centaurus Road Huntsbury Christchurch 8022",
+   "osm": "Cashmere Pharmacy",
+   "osm_id": "n5862744822",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Christchurch South Pharmacy",
+   "reg_addr": "167 Colombo Street Sydenham Christchurch 8023",
+   "osm": "Christchurch South Medical Centre",
+   "osm_id": "w110651195",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Fairfield Pharmacy",
+   "reg_addr": "1007 Heaphy Terrace Fairfield Hamilton 3214",
+   "osm": "Fairfield Pharmacy",
+   "osm_id": "n2456673412",
+   "osm_addr": "1007 heaphy terrace",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Bay Plaza Pharmacy",
+   "reg_addr": "Shop 14, Hastings Plaza 221 Russell Street North Hastings 4122",
+   "osm": "Bay Plaza Pharmacy",
+   "osm_id": "w1257745684",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Goldfields Pharmacy and Photo Centre",
+   "reg_addr": "Shop 48, 17 and 18 Goldfields Shopping Centre 100 Mary Street Thames 3500",
+   "osm": "Goldfields Pharmacy and Photo Centre",
+   "osm_id": "n5406617703",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Ponsonby Pharmacy",
+   "reg_addr": "1/283 Ponsonby Road Ponsonby Auckland 1011",
+   "osm": "Unichem",
+   "osm_id": "n13822974302",
+   "osm_addr": "283b ponsonby road 1011",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Bruce Amies Pharmacy",
+   "reg_addr": "4 Avondale Road Avondale Auckland 1026",
+   "osm": "Bruce Amies Pharmacy",
+   "osm_id": "n4925898028",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Ilam Healthworks Pharma_x001A_y",
+   "reg_addr": "Tenancy 1, Ground Floor, 110 Memorial Avenue, Burnside, Christchurch, 8053",
+   "osm": "Unichem",
+   "osm_id": "n11938658389",
+   "osm_addr": "110 memorial avenue 8053",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Herne Bay Pharmacy",
+   "reg_addr": "210 Jervois Road Herne Bay Auckland 1011",
+   "osm": "Herne Bay Pharmacy",
+   "osm_id": "n10882314002",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Unichem Hickey's Pharmacy",
+   "reg_addr": "16A Moana Avenue Orewa 0931",
+   "osm": "Unichem",
+   "osm_id": "w339633814",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Hillcrest Central Pharmacy",
+   "reg_addr": "66 Moore Street Hillcrest Auckland 0627",
+   "osm": "Hillcrest Central Pharmacy",
+   "osm_id": "n4592165168",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Hobsonville Point Pharmacy Limited",
+   "reg_addr": "Shop 3B, 160 Hobsonville Point Road Hobsonville AUCKLAND 0616",
+   "osm": "Hobsonville Point Pharmacy",
+   "osm_id": "n3730506581",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Waimate Pharmacy",
+   "reg_addr": "84 Queen Street, Waimate, 7924",
+   "osm": "Waimate Pharmacy",
+   "osm_id": "n9399742357",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Howick House Pharmacy",
+   "reg_addr": "43 Moore Street Howick Auckland 2014",
+   "osm": "Howick House Pharmacy",
+   "osm_id": "n3663904501",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Mainstreet Pharmacy Howick",
+   "reg_addr": "45 - 47 Picton Street Howick Auckland 2014",
+   "osm": "Unichem",
+   "osm_id": "w330486137",
+   "osm_addr": "45 picton street 2014",
+   "score": 3.5
+  },
+  {
+   "tier": "B",
+   "register": "Hunts Pharmacy",
+   "reg_addr": "Shop 3B, Woolworths Shopping Centre, 359 Massey Road, Mangere East, Auckland, 2024",
+   "osm": "Hunts Pharmacy",
+   "osm_id": "n5151218416",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Wynyard Pharmacy",
+   "reg_addr": "Ground Floor, Datacom Building Rental Unit 4b, 58 Gaunt Street Auckland Central Auckland 1010",
+   "osm": "Unichem",
+   "osm_id": "n5872457093",
+   "osm_addr": "58 gaunt street 1010",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Maungaraki Pharmacy",
+   "reg_addr": "169 Dowse Drive Maungaraki Lower Hutt 5010",
+   "osm": "Maungaraki Pharmacy",
+   "osm_id": "n471807861",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Waterloo Pharmacy",
+   "reg_addr": "Shop 1, 1 Trafalgar Square, Waterloo, Lower Hutt, 5011",
+   "osm": "Waterloo Pharmacy",
+   "osm_id": "n806436831",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Upper Hutt Pharmacy",
+   "reg_addr": "723 Fergusson Drive Elderslea UPPER HUTT 5018",
+   "osm": "Hills Broadway Pharmacy",
+   "osm_id": "n2089505406",
+   "osm_addr": "723 fergusson drive 5018",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Ihakara Pharmacy",
+   "reg_addr": "40 Ihakara Street, Paraparaumu 5032",
+   "osm": "Ihakara Pharmacy",
+   "osm_id": "n11004953646",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Vercoe Road Pharmacy",
+   "reg_addr": "35 Vercoe Road, Beerescourt, Hamilton, 3200",
+   "osm": "Vercoe Road Pharmacy",
+   "osm_id": "n5097402964",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Pyes Pa Pharmacy",
+   "reg_addr": "Shop 7, 83 Pyes Pa Road Pyes Pa TAURANGA 3112",
+   "osm": "Pyes Pa Pharmacy",
+   "osm_id": "n5809596928",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Avalon Pharmacy",
+   "reg_addr": "6 Avalon Drive, Nawton, Hamilton, 3200",
+   "osm": "Avalon Pharmacy",
+   "osm_id": "n3678265741",
+   "osm_addr": "6 avalon drive",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Unichem Bramwells Pharmacy",
+   "reg_addr": "232 Gladstone Road Gisborne 4010",
+   "osm": "Unichem",
+   "osm_id": "n7120341350",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Mt Eden Pharmacy",
+   "reg_addr": "431 Mt Eden Road Mt Eden Auckland 1024",
+   "osm": "Mount Eden Pharmacy",
+   "osm_id": "n3678419755",
+   "osm_addr": "431 mount eden road",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Pharmacy 455 Mt Eden",
+   "reg_addr": "455D Mt Eden Road Mt Eden Auckland 1024",
+   "osm": "Pharmacy 455",
+   "osm_id": "n3678428320",
+   "osm_addr": "455 mount eden road",
+   "score": 3.33
+  },
+  {
+   "tier": "B",
+   "register": "Jaks Pharmacy",
+   "reg_addr": "The Warehouse 35 Cavendish Drive Manukau AUCKLAND 2104",
+   "osm": "Jaks Pharmacy",
+   "osm_id": "n9861417837",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Pharmacy @ Bell Block",
+   "reg_addr": "188 Parklands Avenue Bell Block NEW PLYMOUTH 4312",
+   "osm": "Pharmacy at Bell Block",
+   "osm_id": "n4583706221",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Wellington Compounding Pharmacy",
+   "reg_addr": "67 Miramar Avenue Miramar Wellington 6022",
+   "osm": "Wellington Compunding Pharmacy",
+   "osm_id": "n1237962688",
+   "osm_addr": "67 miramar avenue 6022",
+   "score": 3.33
+  },
+  {
+   "tier": "B",
+   "register": "Juliet Ave Pharmacy",
+   "reg_addr": "Shop 5/59 Juliet Avenue Howick Auckland 2014",
+   "osm": "Juliet Avenue Pharmacy",
+   "osm_id": "n10945611338",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Cannons Creek Pharmacy",
+   "reg_addr": "221 Bedford Street Cannons Creek Porirua 5024",
+   "osm": "Cannons Creek Pharmacy",
+   "osm_id": "n13376759541",
+   "osm_addr": "221 bedford street",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Kawerau Pharmacy",
+   "reg_addr": "Unit B,  2 Tarawera Court Islington Street Kawerau 3127",
+   "osm": "Kawerau Pharmacy",
+   "osm_id": "n2317967121",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Kaikoura Pharmacy",
+   "reg_addr": "37 West End KAIKOURA 7300",
+   "osm": "Kaikoura Pharmacy",
+   "osm_id": "n7885751651",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Crofton Downs Pharmacy",
+   "reg_addr": "Churchill Drive Shopping Centre, 124 Churchill Drive, Crofton Downs, Wellington, 6035",
+   "osm": "Crofton Downs Pharmacy",
+   "osm_id": "n2985766700",
+   "osm_addr": "124 churchill drive",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Karori Mall Pharmacy",
+   "reg_addr": "Shop 6, 250 Karori Road, Karori, Wellington, 6012",
+   "osm": "Unichem",
+   "osm_id": "n693891141",
+   "osm_addr": "250 karori road",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Marsden Village Pharmacy",
+   "reg_addr": "Unit 1, 159 Karori Road, Karori, Wellington 6012",
+   "osm": "Unichem",
+   "osm_id": "n1977218544",
+   "osm_addr": "159 karori road 6012",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Kauri Healthcare Pharmacy",
+   "reg_addr": "619 Featherston Street, Roslyn, Palmerston North, 4414",
+   "osm": "Unichem",
+   "osm_id": "w919959350",
+   "osm_addr": "619 featherston street",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Kawakawa Pharmacy",
+   "reg_addr": "21 - 23 Gillies Street Kawakawa 0210",
+   "osm": "Kawakawa Pharmacy",
+   "osm_id": "n12586870779",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Kelston Medical Pharmacy",
+   "reg_addr": "8A Archibald Road Kelston Auckland 0602",
+   "osm": "Kelston Pharmacy",
+   "osm_id": "n5942223441",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Hataitai Pharmacy",
+   "reg_addr": "4 Moxham Avenue Hataitai Wellington 6021",
+   "osm": "Hataitai Pharmacy",
+   "osm_id": "n6045689607",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Pharmacy Three Rivers",
+   "reg_addr": "75 Customhouse Street Gisborne 4010",
+   "osm": "Pharmacy Three Rivers",
+   "osm_id": "n12610745344",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Kensington Pharmacy",
+   "reg_addr": "Shop 1, 4 Kensington Avenue Kensington Whangarei 0112",
+   "osm": "Kensington Pharmacy",
+   "osm_id": "n3933065336",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Kingsland Pharmacy",
+   "reg_addr": "491 New North Road Kingsland AUCKLAND 1021",
+   "osm": "Kingsland Pharmacy",
+   "osm_id": "n3466482445",
+   "osm_addr": "491 new north road",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Knox Pharmacy",
+   "reg_addr": "402 George Street North Dunedin Dunedin 9016",
+   "osm": "Unichem",
+   "osm_id": "n1197840002",
+   "osm_addr": "402 george street 9016",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Napier Pharmacy",
+   "reg_addr": "70 Wellesley Road Napier South Napier 4110",
+   "osm": "Napier Pharmacy",
+   "osm_id": "n4283841852",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Lagan's Pharmacy",
+   "reg_addr": "10 Main Street, Upper Hutt 5018",
+   "osm": "Lagan's Pharmacy",
+   "osm_id": "n10831788684",
+   "osm_addr": "10 main street 5018",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Unichem Leabank Pharmacy",
+   "reg_addr": "102-104 Weymouth Road Manurewa Auckland 2102",
+   "osm": "Unichem",
+   "osm_id": "n468657944",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Hart's Pharmacy",
+   "reg_addr": "27-35 Queen Street WARKWORTH 0910",
+   "osm": "Harts Pharmacy",
+   "osm_id": "n14184146304",
+   "osm_addr": "27 35 queen street 0910",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Leeston Pharmacy",
+   "reg_addr": "76 High Street LEESTON 7632",
+   "osm": "Leeston Pharmacy",
+   "osm_id": "n3830031779",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Liddells Pharmacy",
+   "reg_addr": "48 King Street Pukekohe 2120",
+   "osm": "Liddells Pharmacy",
+   "osm_id": "n4583601125",
+   "osm_addr": "48 king street",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Lincoln Mall Pharmacy Limited",
+   "reg_addr": "Unit 1A3/192  Universal Drive Henderson Auckland 0610",
+   "osm": "Lincoln Mall Pharmacy",
+   "osm_id": "n9421626115",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Sunnynook Link Pharmacy",
+   "reg_addr": "4/146 Sunnynook Road Sunnynook Auckland 0620",
+   "osm": "Link Pharmacy",
+   "osm_id": "n5047602332",
+   "osm_addr": "146 sunnynook road",
+   "score": 3.9
+  },
+  {
+   "tier": "A",
+   "register": "Community Pharmacy Linwood",
+   "reg_addr": "Shop 1, 201 Linwood Avenue Linwood CHRISTCHURCH 8011",
+   "osm": "Community Pharmacy Linwood",
+   "osm_id": "n13149000225",
+   "osm_addr": "201 linwood avenue",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Linwood Village Pharmacy",
+   "reg_addr": "Shop 2/384 Worcester Street Linwood Christchurch 8011",
+   "osm": "Linwood Village Pharmacy",
+   "osm_id": "n13125766923",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Alexander Pharmacy",
+   "reg_addr": "191B Willis Street Te Aro Wellington 6011",
+   "osm": "Alexander Pharmacy",
+   "osm_id": "n269652180",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Longhurst Pharmacy",
+   "reg_addr": "53 Caulfield Avenue Halswell CHRISTCHURCH 8025",
+   "osm": "Longhurst Pharmacy",
+   "osm_id": "n8369764587",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Pharmacy 145 On Victoria",
+   "reg_addr": "145 Victoria Avenue Whanganui 4500",
+   "osm": "Pharmacy 145 on Victoria",
+   "osm_id": "n5510203151",
+   "osm_addr": "145 victoria avenue 4500",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Lunn Ave Pharmacy",
+   "reg_addr": "2/110 Lunn Avenue Remuera AUCKLAND 1072",
+   "osm": "Unichem",
+   "osm_id": "n13924447709",
+   "osm_addr": "110 lunn avenue",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Manukau Medical Pharmacy",
+   "reg_addr": "18 Manukau Station Road Manukau AUCKLAND 2104",
+   "osm": "Manukau Medical Pharmacy",
+   "osm_id": "n7827720324",
+   "osm_addr": "18 manukau station road",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Southmall Pharmacy",
+   "reg_addr": "Unit F, 185 Great South Road Manurewa AUCKLAND 2102",
+   "osm": "Southmall Pharmacy",
+   "osm_id": "n5053098725",
+   "osm_addr": "great south road",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Mackenzie Pharmacy",
+   "reg_addr": "6-7 Market Place Twizel 7901",
+   "osm": "Mackenzie Pharmacy",
+   "osm_id": "n2549289284",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Unichem Terrace End Pharmacy",
+   "reg_addr": "325 Broadway Avenue, Terrace End, Palmerston North, 4414",
+   "osm": "Unichem",
+   "osm_id": "n13473045130",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Mangawhai Pharmacy",
+   "reg_addr": "12C Wood Street Mangawhai Heads Mangawhai 0505",
+   "osm": "Mangawhai Pharmacy",
+   "osm_id": "n5242510108",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Maniototo Pharmacy",
+   "reg_addr": "25 Charlemont Street Ranfurly 9332",
+   "osm": "Maniototo Pharmacy",
+   "osm_id": "n3440504868",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Manurewa Medical Centre Pharmacy",
+   "reg_addr": "Manurewa Medical Centre, Ground Floor 157 Great South Road Manurewa AUCKLAND 2102",
+   "osm": "Manurewa Medical Centre Pharmacy",
+   "osm_id": "n1789714722",
+   "osm_addr": "157 great south road 2102",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Mapua Pharmacy",
+   "reg_addr": "Unit 3 and 4, 66-68 Aranui Road, Mapua 7005",
+   "osm": "Mapua Pharmacy",
+   "osm_id": "n2166315025",
+   "osm_addr": "68 aranui road 7005",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Gees Pharmacy",
+   "reg_addr": "279 Gloucester Street Taradale NAPIER 4112",
+   "osm": "Gee's Pharmacy",
+   "osm_id": "w372916949",
+   "osm_addr": "279 gloucester street 4112",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Marshlands Family Pharmacy",
+   "reg_addr": "427 Marshland Road Marshland Christchurch 8051",
+   "osm": "Marshlands Family Pharmacy",
+   "osm_id": "w550738765",
+   "osm_addr": "427 marshland road 8051",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Masterton Medical Pharmacy Limited",
+   "reg_addr": "4A Colombo Road Lansdowne Masterton 5810",
+   "osm": "Masterton Medical Pharmacy",
+   "osm_id": "w374056083",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Maungatapu Pharmacy",
+   "reg_addr": "Unit F, Maungatapu Shopping Centre, 287 - 291 Maungatapu Road, Maungatapu, Tauranga, 3112",
+   "osm": "Maungatapu Pharmacy",
+   "osm_id": "n1283595196",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Maunu Pharmacy Ltd",
+   "reg_addr": "115A Maunu Road Woodhill WHANGAREI 0110",
+   "osm": "Maunu Pharmacy",
+   "osm_id": "n3931751850",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Maxcare Pharmacy",
+   "reg_addr": "4/225 Great South Road Otahuhu Auckland 1062",
+   "osm": "MaxCare Pharmacy",
+   "osm_id": "n5029943797",
+   "osm_addr": "225b great south road 1062",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Collingwood Street Pharmacy",
+   "reg_addr": "132 Collingwood Street Nelson 7010",
+   "osm": "Collingwood St Pharmacy",
+   "osm_id": "n11911251909",
+   "osm_addr": "132 collingwood street 7010",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "McLaren Park Pharmacy",
+   "reg_addr": "7/80 Bruce McLaren Road Henderson AUCKLAND 0612",
+   "osm": "McLaren Park Pharmacy",
+   "osm_id": "n4883148691",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Mission Bay Pharmacy",
+   "reg_addr": "3 Patteson Avenue Mission Bay AUCKLAND 1071",
+   "osm": "Mission Bay Pharmacy",
+   "osm_id": "n2100705914",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Panmure Pharmacy",
+   "reg_addr": "200 Queens Road Panmure Auckland 1072",
+   "osm": "Panmure Pharmacy",
+   "osm_id": "n4662910744",
+   "osm_addr": "200 queens road",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Medplus Pharmacy",
+   "reg_addr": "327 Lake Road Hauraki Auckland 0622",
+   "osm": "Medplus Pharmacy",
+   "osm_id": "n5030003421",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Total Health Pharmacy",
+   "reg_addr": "Shop 3, 252 The Strand Whakatane 3120",
+   "osm": "Total Health Chemist",
+   "osm_id": "n6262860999",
+   "osm_addr": "252 the strand",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Methven Pharmacy",
+   "reg_addr": "Shop 830, 101 Main Street METHVEN 7730",
+   "osm": "Methven Pharmacy",
+   "osm_id": "n489329007",
+   "osm_addr": "101 main street 7730",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Millwater Parkway Pharmacy",
+   "reg_addr": "Unit 19, 175 Millwater Parkway Silverdale 0932",
+   "osm": "Millwater Parkway Pharmacy",
+   "osm_id": "n3730506582",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Otahuhu 7 Day Chemist",
+   "reg_addr": "15 - 23 Station Road Otahuhu Auckland 1062",
+   "osm": "Otahuhu 7 Day Chemist",
+   "osm_id": "n5029943783",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Glenavon Kiwi Chemist",
+   "reg_addr": "268 Blockhouse Bay Road, Avondale, Auckland 0600",
+   "osm": "Kiwi Chemist",
+   "osm_id": "n5317500816",
+   "osm_addr": "268 blockhouse bay road",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Moera Pharmacy",
+   "reg_addr": "139 Randwick Road Moera Lower Hutt 5010",
+   "osm": "Moera pharmacy",
+   "osm_id": "n4723217535",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Unichem Moorhouse Pharmacy",
+   "reg_addr": "3 Pilgrim Place Sydenham Christchurch 8011",
+   "osm": "Unichem",
+   "osm_id": "n3118345613",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Life Pharmacy Blenheim",
+   "reg_addr": "101A Market Street, Blenheim, 7201",
+   "osm": "Life Pharmacy",
+   "osm_id": "n5609274632",
+   "osm_addr": "101a market street 7201",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Mt Albert Village Pharmacy",
+   "reg_addr": "901 New North Road, Mount Albert, Auckland 1025",
+   "osm": "Mount Albert Village Pharmacy",
+   "osm_id": "n10172635315",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Merrilands Pharmacy",
+   "reg_addr": "Shop 1, 200 Mangorei Road, Merrilands, New Plymouth, 4312",
+   "osm": "Merrilands Pharmacy",
+   "osm_id": "n2689134977",
+   "osm_addr": "200 mangorei road 4312",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Musselburgh Pharmacy (2021) Limited",
+   "reg_addr": "59 - 61 Musselburgh Rise Musselburgh Dunedin 9013",
+   "osm": "Musselburgh Pharmacy",
+   "osm_id": "n3744920129",
+   "osm_addr": "59 musselburgh rise",
+   "score": 3.5
+  },
+  {
+   "tier": "A",
+   "register": "Royal Oak Pharmacy",
+   "reg_addr": "703A Manukau Road Royal Oak AUCKLAND 1023",
+   "osm": "Royal Oak Pharmacy",
+   "osm_id": "w259132924",
+   "osm_addr": "703a manukau road 1023",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Brooklyn Pharmacy",
+   "reg_addr": "Shop 2, 3 & 4/67 Cleveland Street Brooklyn Wellington 6021",
+   "osm": "Brooklyn Pharmacy",
+   "osm_id": "n300202123",
+   "osm_addr": "67 cleveland street",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Steeds Pharmacy",
+   "reg_addr": "244 Oxford Street Levin 5510",
+   "osm": "Steeds Pharmacy",
+   "osm_id": "w554589295",
+   "osm_addr": "244 oxford street",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Life Pharmacy Nelson City",
+   "reg_addr": "Tenancy 2, 191 Trafalgar Street Nelson 7010",
+   "osm": "Life Pharmacy",
+   "osm_id": "n7816310185",
+   "osm_addr": "191 trafalgar street 7010",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "New Lynn West Pharmacy",
+   "reg_addr": "84A Titirangi Road New Lynn Auckland 0600",
+   "osm": "New Lynn West Pharmacy",
+   "osm_id": "n4072945291",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Newton A-Z Pharmacy",
+   "reg_addr": "357 Karangahape Road Auckland Central Auckland 1010",
+   "osm": "Newton A-Z Pharmacy",
+   "osm_id": "n4753906109",
+   "osm_addr": "357 karangahape road",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Unichem Newtown Mall Pharmacy",
+   "reg_addr": "Unit 2, 195 Riddiford Street Newtown Wellington 6021",
+   "osm": "Unichem",
+   "osm_id": "n2629389188",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Ngongotaha Pharmacy Limited",
+   "reg_addr": "17 Taui Street, Ngongotaha, Rotorua, 3010",
+   "osm": "Ngongotahā Pharmacy",
+   "osm_id": "n3736819651",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Takapuna Beach Pharmacy",
+   "reg_addr": "Front ground level, 87 Hurstmere road Takapuna Auckland 0622",
+   "osm": "Takapuna Beach Pharmacy",
+   "osm_id": "n495879135",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Te Puna Hauora Pharmacy",
+   "reg_addr": "58 Akoranga Drive Northcote Auckland 0627",
+   "osm": "Te Puna Hauora Pharmacy",
+   "osm_id": "w1019269832",
+   "osm_addr": "58a akoranga drive",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "North Avon Pharmacy",
+   "reg_addr": "28 North Avon Road Richmond Christchurch 8013",
+   "osm": "North Avon Pharmacy",
+   "osm_id": "n13680950350",
+   "osm_addr": "28 north avon road 8013",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "North Harbour Pharmacy",
+   "reg_addr": "Unit 1, 326 Sunset Road, Windsor Park, Auckland, 0632",
+   "osm": "North Harbour Pharmacy",
+   "osm_id": "n5487617688",
+   "osm_addr": "1 326 sunset road",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "PharmCare Pharmacy",
+   "reg_addr": "3084 Great North Road, New Lynn, Auckland, 0600",
+   "osm": "PharmCare Pharmacy",
+   "osm_id": "n5942223472",
+   "osm_addr": "3084 great north road 0600",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Pahurehure Pharmacy",
+   "reg_addr": "Pahurehure Shopping Centre, Shops 7 & 7A, Corner of Elliot Street & Rushgreen Avenue, Papakura, Auckland 2113",
+   "osm": "Pahurehure Pharmacy",
+   "osm_id": "n5013799656",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Oamaru Pharmacy",
+   "reg_addr": "171 - 173 Thames Street Oamaru 9400",
+   "osm": "Oamaru pharmacy",
+   "osm_id": "n4655120606",
+   "osm_addr": "171 thames street",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Ohope Beach Pharmacy",
+   "reg_addr": "262 Pohutukawa Avenue Ohope 3121",
+   "osm": "Ohope Beach Pharmacy",
+   "osm_id": "n6474589473",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Onehunga Family Pharmacy",
+   "reg_addr": "163A Onehunga Mall Onehunga AUCKLAND 1061",
+   "osm": "Onehunga Family Pharmacy",
+   "osm_id": "n5031826962",
+   "osm_addr": "161 onehunga mall",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Onehunga Centre Pharmacy",
+   "reg_addr": "73 Church Street Onehunga Auckland 1061",
+   "osm": "Unichem",
+   "osm_id": "n2942674841",
+   "osm_addr": "73 church street",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Darfield Pharmacy",
+   "reg_addr": "58 South Terrace DARFIELD 7510",
+   "osm": "Darfield Pharmacy",
+   "osm_id": "n4694149636",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Ormiston Kiwi Chemist",
+   "reg_addr": "211 Ormiston Road, Flatbush, Auckland, 2019",
+   "osm": "Ormiston Kiwi Pharmacy",
+   "osm_id": "n14106630204",
+   "osm_addr": "l 0 211 ormiston road",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Orrs Kowhai Pharmacy",
+   "reg_addr": "Units B & C, Kowhai Court, 27 Rust Avenue, Whangarei, 0110",
+   "osm": "Orrs Kowhai Pharmacy",
+   "osm_id": "n14071779557",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Oxford Pharmacy",
+   "reg_addr": "49B Main Street OXFORD 7430",
+   "osm": "Oxford Pharmacy",
+   "osm_id": "n5502516122",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Unichem Peter Boles Pharmacy",
+   "reg_addr": "6/33 Fellbrook Street, Manurewa, Auckland, 2102",
+   "osm": "Peter Boles Pharmacy",
+   "osm_id": "n5053006625",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Hanafins Pharmacy",
+   "reg_addr": "Shop 8, 62 Riccarton Road, Riccarton, Christchurch, 8011",
+   "osm": "Hanafins Pharmacy",
+   "osm_id": "n11168342143",
+   "osm_addr": "62 riccarton road 8011",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Whitby Pharmacy",
+   "reg_addr": "Shops 8 and 9, Whitby Village Centre 69A Discovery Drive Whitby WELLINGTON 5024",
+   "osm": "Whitby Pharmacy",
+   "osm_id": "n482915710",
+   "osm_addr": "69a discovery drive 5024",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Balmoral Pharmacy",
+   "reg_addr": "611 Dominion Road Mount Eden Auckland 1041",
+   "osm": "Balmoral Pharmacy",
+   "osm_id": "n6550726530",
+   "osm_addr": "611 dominion road",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Parklands Medical Pharmacy",
+   "reg_addr": "Ground Floor Unit A, 345 Mairehau Road Parklands Christchurch 8083",
+   "osm": "Unichem",
+   "osm_id": "n12148523058",
+   "osm_addr": "345 mairehau road 8083",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Parklands Pharmacy",
+   "reg_addr": "Shops 4-6, Parklands Shopping Centre 60 Queenspark Drive Parklands CHRISTCHURCH 8083",
+   "osm": "Unichem",
+   "osm_id": "w1326138691",
+   "osm_addr": "60 queenspark drive 8083",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Peak Pharmacy",
+   "reg_addr": "33 - 35 Napier Road HAVELOCK NORTH 4130",
+   "osm": "Denton's Peak Pharmacy",
+   "osm_id": "n5608193561",
+   "osm_addr": "35 napier road 4130",
+   "score": 3.5
+  },
+  {
+   "tier": "B",
+   "register": "Akaroa Pharmacy",
+   "reg_addr": "55 Beach Road Akaroa 7520",
+   "osm": "Akaroa Pharmacy",
+   "osm_id": "n4150389914",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Petone Pharmacy",
+   "reg_addr": "240 - 242 Jackson Street Petone Lower Hutt 5012",
+   "osm": "Unichem",
+   "osm_id": "n2193896384",
+   "osm_addr": "242 jackson street 5012",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "West Harbour Pharmacy",
+   "reg_addr": "Shop 6, 45 Luckens Road West Harbour AUCKLAND 0618",
+   "osm": "West Harbour Pharmacy",
+   "osm_id": "n11050305749",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Pharmacy On Cameron",
+   "reg_addr": "Shop 3, 850 Cameron Road Tauranga South Tauranga 3112",
+   "osm": "Pharmacy on Cameron",
+   "osm_id": "n3790910593",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Life Pharmacy Motueka",
+   "reg_addr": "179 High Street, Motueka, 7120",
+   "osm": "Life Pharmacy",
+   "osm_id": "n321543747",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Golden Bay Pharmacy",
+   "reg_addr": "17 Commercial Street Takaka 7110",
+   "osm": "Golden Bay Pharmacy",
+   "osm_id": "w475422762",
+   "osm_addr": "17 commercial street",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Chemist Warehouse - Bethlehem",
+   "reg_addr": "Shop C08-11, Bethlehem Town Centre, 19 Bethlehem Road, Bethlehem, Tauranga, 3110",
+   "osm": "Chemist Warehouse",
+   "osm_id": "n9956764268",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Chemist Warehouse Centre Place",
+   "reg_addr": "501 Victoria Street, Hamilton Central, Hamilton 3204",
+   "osm": "Chemist Warehouse",
+   "osm_id": "n11870969534",
+   "osm_addr": "501 victoria street 3204",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Chemist Warehouse Blenheim Square",
+   "reg_addr": "Shop 1, Blenheim Square 217 Blenheim Road Riccarton Christchurch 8041",
+   "osm": "Chemist Warehouse",
+   "osm_id": "n9409852052",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Chemist Warehouse Okara Park",
+   "reg_addr": "21 Okara Drive, Morningside, Whangarei 0110",
+   "osm": "Chemist Warehouse",
+   "osm_id": "n12284924595",
+   "osm_addr": "21 okara drive 0110",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Chemist Warehouse Onehunga",
+   "reg_addr": "100 Church Street Onehunga Auckland 1061",
+   "osm": "Chemist Warehouse",
+   "osm_id": "n4057751091",
+   "osm_addr": "100 church street",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Chemist Warehouse Milford",
+   "reg_addr": "Milford Centre, Shop 115, 24 Milford Road, Milford, Auckland, 0620",
+   "osm": "Chemist Warehouse",
+   "osm_id": "w879150419",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Chemist Warehouse Bayfair",
+   "reg_addr": "Rest1, Bayfair Shopping Centre 19 Girven Road Mount Maunganui 3116",
+   "osm": "Chemist Warehouse",
+   "osm_id": "n13882969401",
+   "osm_addr": "19 girven road 3116",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Chemist Warehouse Kilbirnie",
+   "reg_addr": "Shop 4, 27-31 Bay Road, Kilbirnie, Wellington, 6022",
+   "osm": "Chemist Warehouse",
+   "osm_id": "n11481294386",
+   "osm_addr": "27 31 bay road",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Chemist Warehouse Browns Bay",
+   "reg_addr": "14 Clyde Road Browns Bay Auckland 0630",
+   "osm": "Chemist Warehouse",
+   "osm_id": "n14288441112",
+   "osm_addr": "14 clyde road",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Chemist Warehouse Northwood",
+   "reg_addr": "Northwood Supa Centa, A/1 Radcliffe Road, Belfast, Christchurch, 8051",
+   "osm": "Chemist Warehouse",
+   "osm_id": "w1465180818",
+   "osm_addr": "1 radcliffe road 8051",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Chemist Warehouse Ratanui Street",
+   "reg_addr": "Tenancy 1, 10-12 Ratanui Street, Henderson, Auckland, 0612",
+   "osm": "Chemist Warehouse",
+   "osm_id": "w1514537245",
+   "osm_addr": "10 ratanui street",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Chemist Warehouse Christchurch City Centre",
+   "reg_addr": "Level 1, 254 High Street, Christchurch Central, Christchurch, 8011",
+   "osm": "Chemist Warehouse",
+   "osm_id": "n13741620770",
+   "osm_addr": "254 high street 8011",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Chemist Warehouse Eden Quarter",
+   "reg_addr": "274 Dominion Road, Mount Eden, Auckland, 1024,",
+   "osm": "Chemist Warehouse",
+   "osm_id": "w330332546",
+   "osm_addr": "274 dominion road 1024",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Kelburn Pharmacy",
+   "reg_addr": "1 Upland Road Kelburn Wellington 6012",
+   "osm": "Kelburn Pharmacy",
+   "osm_id": "n5855624185",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Naenae Pharmacy",
+   "reg_addr": "29 Hillary Court Naenae Lower Hutt 5011",
+   "osm": "Naenae Pharmacy",
+   "osm_id": "n13260453272",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Carterton Pharmacy",
+   "reg_addr": "100 High Street Carterton 5713",
+   "osm": "Carterton Pharmacy",
+   "osm_id": "n1805698519",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Duncan's Pharmacy",
+   "reg_addr": "443-445 Queen Street Kuripuni Masterton 5810",
+   "osm": "Duncan's Pharmacy",
+   "osm_id": "n1017726815",
+   "osm_addr": "445 queen street 5810",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Life Pharmacy Masterton",
+   "reg_addr": "132 - 136 Queen Street Masterton 5810",
+   "osm": "Life Pharmacy",
+   "osm_id": "n1017726812",
+   "osm_addr": "132 queen street 5810",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Mana Pharmacy",
+   "reg_addr": "107 Mana Esplanade Paremata Porirua 5026",
+   "osm": "Mana Pharmacy",
+   "osm_id": "n12195420101",
+   "osm_addr": "107 mana esplanade 5026",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Pharmville St Albans Pharmacy",
+   "reg_addr": "Unit 6, 433 Dominion Road Mt Eden Auckland 1024",
+   "osm": "PharmVille",
+   "osm_id": "n13685790102",
+   "osm_addr": "dominion road",
+   "score": 2.9
+  },
+  {
+   "tier": "B",
+   "register": "Wairoa Pharmacy",
+   "reg_addr": "8 Paul Street Wairoa 4108",
+   "osm": "Wairoa Pharmacy",
+   "osm_id": "n4757732327",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Waipawa Pharmacy",
+   "reg_addr": "24 High Street, Waipawa, 4210",
+   "osm": "WAIPAWA PHARMACY",
+   "osm_id": "w874441814",
+   "osm_addr": "24 high street 4210",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Pohutukawa Coast Pharmacy",
+   "reg_addr": "Unit 4, 129A Beachlands Road Beachlands Auckland 2018",
+   "osm": "Pohutukawa Coast Pharmacy",
+   "osm_id": "n5324642823",
+   "osm_addr": "beachlands road",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Point Chevalier Pharmacy",
+   "reg_addr": "1209-1213 Great North Road Point Chevalier AUCKLAND 1022",
+   "osm": "Unichem",
+   "osm_id": "n5015955238",
+   "osm_addr": "1213 great north road 1022",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Pollen Street Pharmacy",
+   "reg_addr": "Shop B, 330A Pollen Street, Thames, 3500",
+   "osm": "Pollen Street Pharmacy",
+   "osm_id": "n5406617719",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "ProHealth Panmure Pharmacy",
+   "reg_addr": "136 Queens Road Panmure Auckland 1072",
+   "osm": "Prohealth Panmure Pharmacy",
+   "osm_id": "n12594285401",
+   "osm_addr": "138 queens road",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Prochem Pharmacy",
+   "reg_addr": "1862 Great North Road Avondale AUCKLAND 1026",
+   "osm": "Prochem Pharmacy",
+   "osm_id": "n3879177627",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Putaruru Pharmacy",
+   "reg_addr": "Ground Floor, 3 Duke Street PUTARURU 3411",
+   "osm": "Unichem",
+   "osm_id": "n3496751641",
+   "osm_addr": "3 duke street",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Queen Street Pharmacy Limited",
+   "reg_addr": "35 Queen Street Upper Hutt 5018",
+   "osm": "Queen Street Pharmacy",
+   "osm_id": "n4202115435",
+   "osm_addr": "queen street",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Queenstown Pharmacy",
+   "reg_addr": "Queenstown Medical Centre Building, 9 Isle Street, Queenstown, 9300",
+   "osm": "Queenstown Pharmacy",
+   "osm_id": "n4820023721",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Raglan Pharmacy",
+   "reg_addr": "8 Bow Street Raglan 3225",
+   "osm": "Raglan Pharmacy",
+   "osm_id": "n7061474777",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Unichem Pharmacy Greenmeadows",
+   "reg_addr": "522-524 Kennedy Road Greenmeadows NAPIER 4112",
+   "osm": "Unichem",
+   "osm_id": "n3975069100",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Unichem Munroe St. Pharmacy",
+   "reg_addr": "32 Munroe Street Napier South NAPIER 4110",
+   "osm": "Unichem",
+   "osm_id": "n4283841855",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Unichem Rototuna Pharmacy",
+   "reg_addr": "Shop number 14 -16, Rototuna Retail Centre corner of Thomas Road & Horsham Downs Road Rototuna HAMILTON 3210",
+   "osm": "Rototuna Unichem Pharmacy",
+   "osm_id": "n1060542225",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Unichem Rangatira Pharmacy",
+   "reg_addr": "338-342 Rangatira Road Beach Haven Auckland 0626",
+   "osm": "Unichem",
+   "osm_id": "n725873881",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Ranui Pharmacy",
+   "reg_addr": "421 Swanson Road Ranui AUCKLAND 0612",
+   "osm": "Ranui Pharmacy",
+   "osm_id": "n7167641867",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "RedHills Pharmacy",
+   "reg_addr": "Unit 4, 3 Red Hills Road Massey Auckland 0614",
+   "osm": "RedHills Pharmacy",
+   "osm_id": "n14072039402",
+   "osm_addr": "4 3 red hills road 0614",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Redcliffs Pharmacy",
+   "reg_addr": "95 Main Road Redcliffs Christchurch 8081",
+   "osm": "Redcliffs Pharmacy",
+   "osm_id": "w410101506",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Unichem Remarkables Pharmacy",
+   "reg_addr": "Remarkables Park Shopping Centre 53/12 Hawthorne Drive Frankton Queenstown 9300",
+   "osm": "Unichem",
+   "osm_id": "n776030944",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Remuera Pharmacy Limited",
+   "reg_addr": "377 Remuera Road Remuera AUCKLAND 1050",
+   "osm": "Remuera Pharmacy",
+   "osm_id": "n14040558523",
+   "osm_addr": "377 remuera road",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Life Pharmacy Riccarton",
+   "reg_addr": "Westfield Riccarton, 129 Riccarton Road, Riccarton, Christchurch, 8041",
+   "osm": "Life Pharmacy",
+   "osm_id": "w1078378541",
+   "osm_addr": "8041",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Richmond Road Pharmacy",
+   "reg_addr": "446 Richmond Road Grey Lynn AUCKLAND 1021",
+   "osm": "Richmond Rd Pharmacy",
+   "osm_id": "n14246958374",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Robertsons Strandon Pharmacy",
+   "reg_addr": "488 Devon Street East, Strandon, New Plymouth, 4312",
+   "osm": "Robertsons Pharmacy",
+   "osm_id": "n4583706187",
+   "osm_addr": "",
+   "score": 2.9
+  },
+  {
+   "tier": "B",
+   "register": "Graeme Avenue Pharmacy",
+   "reg_addr": "Shop 4, 2 Graeme Avenue, Mangere East, Auckland, 2024",
+   "osm": "Graeme Avenue Chemist",
+   "osm_id": "n5151218090",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Unichem Roses Pharmacy",
+   "reg_addr": "281-283 Broadway Avenue Terrace End PALMERSTON NORTH 4441",
+   "osm": "Roses Unichem Pharmacy",
+   "osm_id": "w368410062",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Roskill Healthcare Pharmacy",
+   "reg_addr": "1011 Dominion Road Mount Roskill AUCKLAND 1041",
+   "osm": "Roskill Healthcare Pharmacy",
+   "osm_id": "n4956159294",
+   "osm_addr": "1011 dominion road",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Roslyn Pharmacy",
+   "reg_addr": "Unit 287A & Unit 287C Highgate, Roslyn, Dunedin, 9010",
+   "osm": "Roslyn Care Chemist",
+   "osm_id": "n1977514018",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Rust Avenue Pharmacy",
+   "reg_addr": "22 Rust Avenue, Central, Whangarei, 0110",
+   "osm": "Rust Ave Dispensary",
+   "osm_id": "n14065373869",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Victory Square Pharmacy",
+   "reg_addr": "172 St Vincent Street, Victory Square, Nelson, 7010",
+   "osm": "Victory Square Pharmacy",
+   "osm_id": "n7403433587",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Ranolf Pharmacy",
+   "reg_addr": "59 Ranolf Street, Victoria, Rotorua, 3010",
+   "osm": "Ranolf Pharmacy",
+   "osm_id": "n13685832557",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Shields Pharmacy Limited",
+   "reg_addr": "95 Main North Road Papanui CHRISTCHURCH 8052",
+   "osm": "Shields Pharmacy",
+   "osm_id": "n4759521928",
+   "osm_addr": "95 main north road 8052",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Shirley Dispensary",
+   "reg_addr": "13 Marshland Road, Shirley, Christchurch, 8061",
+   "osm": "Shirley Dispensary",
+   "osm_id": "n13867719082",
+   "osm_addr": "13 marshland road 8061",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Life Pharmacy Barrington",
+   "reg_addr": "Shop 54, Barrington Shopping Centre 256 Barrington Street Spreydon Christchurch 8024",
+   "osm": "Life Pharmacy",
+   "osm_id": "n7717699195",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Silverdale Clinic Pharmacy",
+   "reg_addr": "2/7 Polarity Rise Silverdale Auckland 0932",
+   "osm": "Silverdale Clinic Pharmacy",
+   "osm_id": "n5077797041",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Central City Pharmacy",
+   "reg_addr": "121 Victoria Avenue Whanganui 4500",
+   "osm": "Central City Pharmacy",
+   "osm_id": "n5510197576",
+   "osm_addr": "121 victoria avenue 4500",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Southend Pharmacy",
+   "reg_addr": "266 Queen Street Masterton 5810",
+   "osm": "Unichem",
+   "osm_id": "n1030347823",
+   "osm_addr": "266 queen street 5810",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Snells Beach Pharmacy",
+   "reg_addr": "Shop 1/347 Mahurangi East Road, Snells Beach, Auckland, 0920",
+   "osm": "Snells Beach Pharmacy",
+   "osm_id": "n3169791112",
+   "osm_addr": "332 mahurangi east road",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "St Martins Pharmacy",
+   "reg_addr": "Shop 2, 92 Wilsons Road South, Saint Martins, Christchurch, 8022",
+   "osm": "St Martins Pharmacy",
+   "osm_id": "n3516219010",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Waltham Pharmacy",
+   "reg_addr": "87 Waltham Road, Waltham, Christchurch, 8023",
+   "osm": "Waltham Pharmacy",
+   "osm_id": "w443763415",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Unichem Stortford Lodge Pharmacy",
+   "reg_addr": "Unit 2, 1026 Heretaunga Street West, Saint Leonards, Hastings, 4120",
+   "osm": "Unichem",
+   "osm_id": "w373151201",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Unichem Sunnynook Pharmacy",
+   "reg_addr": "Shop 4-5, Sunnynook Shopping Centre, 120-126 Sunnynook Road, Sunnynook, Auckland, 0620",
+   "osm": "Unichem",
+   "osm_id": "n5047602341",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Swanson Pharmacy",
+   "reg_addr": "708D Swanson Road Swanson Auckland 0612",
+   "osm": "Swanson Pharmacy",
+   "osm_id": "n3099827201",
+   "osm_addr": "708 swanson road",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Fenwicks Pharmacy",
+   "reg_addr": "Ground Floor 129 Williams Street KAIAPOI 7630",
+   "osm": "Unichem",
+   "osm_id": "n5410991735",
+   "osm_addr": "129 williams street 7630",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Unichem Wigram Pharmacy",
+   "reg_addr": "The Landing Shop 8, 102 The Runway Wigram Christchurch 8042",
+   "osm": "Unichem",
+   "osm_id": "n4694240071",
+   "osm_addr": "102 the runway 8042",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Library Lane Pharmacy",
+   "reg_addr": "Unit 1C 40 Library Lane Albany Auckland 0632",
+   "osm": "Library Lane Pharmacy",
+   "osm_id": "n13769479054",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Taita Pharmacy 2016 Limited",
+   "reg_addr": "1206 High Street Taita LOWER HUTT 5011",
+   "osm": "Taita Pharmacy",
+   "osm_id": "n14296288401",
+   "osm_addr": "1206 high street",
+   "score": 3.5
+  },
+  {
+   "tier": "A",
+   "register": "Tara Road Pharmacy",
+   "reg_addr": "1E Tara Road, Papamoa, Tauranga 3187",
+   "osm": "Tara Road Pharmacy",
+   "osm_id": "w1041860118",
+   "osm_addr": "1e tara road 3187",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Taradale Pharmacy",
+   "reg_addr": "288 - 292 Gloucester Street Taradale Napier 4112",
+   "osm": "Unichem",
+   "osm_id": "w454976788",
+   "osm_addr": "288 gloucester street 4112",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Milford Nutritional Pharmacy",
+   "reg_addr": "Shop 2, 119 Kitchener Road, Milford, Auckland, 0620",
+   "osm": "Milford Nutritional",
+   "osm_id": "n5038449496",
+   "osm_addr": "119 kitchener road",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Te Awamutu Pharmacy Limited",
+   "reg_addr": "168 Alexandra Street, Te Awamutu 3800",
+   "osm": "Te Awamutu Pharmacy",
+   "osm_id": "n3915536486",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Te Ngae Pharmacy",
+   "reg_addr": "Unit 4A, 5 Tarawera Road Lynmore ROTORUA 3010",
+   "osm": "Te Ngae Pharmacy",
+   "osm_id": "n13037043373",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Life Pharmacy Te Puke",
+   "reg_addr": "61 Jellicoe Street Te Puke 3119",
+   "osm": "Life Pharmacy Te Puke",
+   "osm_id": "n5560346322",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Titahi Bay Pharmacy",
+   "reg_addr": "24 Whitehouse Road, Titahi Bay, Porirua, 5022",
+   "osm": "Titahi Bay Pharmacy",
+   "osm_id": "w396190972",
+   "osm_addr": "24 whitehouse road",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Titirangi Pharmacy",
+   "reg_addr": "408 Titirangi Road Titirangi Auckland 0604",
+   "osm": "Titirangi Pharmacy",
+   "osm_id": "n1087801544",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Aspiring Pharmacy",
+   "reg_addr": "29 Helwick Street Wanaka 9305",
+   "osm": "Aspiring Pharmacy",
+   "osm_id": "n4776416126",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Life Pharmacy Prices",
+   "reg_addr": "296 Hardy Street, Nelson, 7010",
+   "osm": "Life Prices Pharmacy",
+   "osm_id": "w221576828",
+   "osm_addr": "296 hardy street 7010",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Turuki Pharmacy Panmure",
+   "reg_addr": "62 Queens Road Panmure Auckland 1072",
+   "osm": "Turuki Pharmacy",
+   "osm_id": "n12487391013",
+   "osm_addr": "62 queens road",
+   "score": 3.5
+  },
+  {
+   "tier": "B",
+   "register": "Newton Pharmacy",
+   "reg_addr": "Shop 2 283 Karangahape Road Auckland Central AUCKLAND 1010",
+   "osm": "Newton Pharmacy",
+   "osm_id": "n13773204802",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Life Pharmacy Napier City",
+   "reg_addr": "131 Emerson Street NAPIER 4110",
+   "osm": "Life Pharmacy",
+   "osm_id": "n4058918092",
+   "osm_addr": "131 emerson street",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Weiti Pharmacy",
+   "reg_addr": "2/3 Brian Smith Drive Silverdale Auckland 0932",
+   "osm": "Unichem",
+   "osm_id": "n12200448575",
+   "osm_addr": "2 3 brian smith drive 0932",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Lakes Care Pharmacy",
+   "reg_addr": "1155 Tutanekai Street ROTORUA 3010",
+   "osm": "Lakes Care Pharmacy",
+   "osm_id": "n3736955617",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Vaiola Pharmacy",
+   "reg_addr": "1 Fleming Street Onehunga Auckland 1061",
+   "osm": "Voila Pharmacy",
+   "osm_id": "n13830073302",
+   "osm_addr": "1 fleming street",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Village Pharmacy Khandallah",
+   "reg_addr": "23 Ganges Road Khandallah Wellington 6035",
+   "osm": "Village Pharmacy Khandallah",
+   "osm_id": "n14047302202",
+   "osm_addr": "23 ganges road 6035",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Village Pharmacy Ngaio",
+   "reg_addr": "57 Ottawa Road Ngaio Wellington 6035",
+   "osm": "Village Pharmacy Ngaio",
+   "osm_id": "n9768510988",
+   "osm_addr": "57 ottawa road 6035",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Hill Road Pharmacy",
+   "reg_addr": "Shop 6 7 Hill Road Manurewa Auckland 2012",
+   "osm": "Hill Road Pharmacy",
+   "osm_id": "n4624427477",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Vivian Pharmacy Limited",
+   "reg_addr": "95 Vivian Street NEW PLYMOUTH 4310",
+   "osm": "Vivian Pharmacy",
+   "osm_id": "n11172881503",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Vogeltown Pharmacy",
+   "reg_addr": "272 Carrington Street Vogeltown NEW PLYMOUTH 4310",
+   "osm": "Vogeltown Pharmacy",
+   "osm_id": "n4584697151",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Hinemoa Pharmacy",
+   "reg_addr": "1276 Hinemoa Street, Rotorua, 3010",
+   "osm": "Hinemoa Pharmacy",
+   "osm_id": "n11332325618",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Waihi Beach Chemist",
+   "reg_addr": "15 Wilson Road Waihi Beach 3611",
+   "osm": "Waihi Beach Chemist",
+   "osm_id": "n5611248151",
+   "osm_addr": "15 wilson road 3611",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Westbury Pharmacy",
+   "reg_addr": "12 Mahara Place, Waikanae, 5036",
+   "osm": "Westbury Pharmacy",
+   "osm_id": "w332694280",
+   "osm_addr": "12 mahara place",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Waimauku Village Pharmacy",
+   "reg_addr": "8 Waimauku Station Road WAIMAUKU 0812",
+   "osm": "Waimauku Village Pharmacy",
+   "osm_id": "n836166729",
+   "osm_addr": "6 waimauku station road 0812",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Waipu Pharmacy",
+   "reg_addr": "25 The Centre, Waipu, 0510",
+   "osm": "Waipu Pharmacy",
+   "osm_id": "n2133435559",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Waitangirua Pharmacy Limited",
+   "reg_addr": "Ora Toa Waitangirua, 201 Warspite Avenue, Porirua, 5024",
+   "osm": "Waitangirua Pharmacy",
+   "osm_id": "w850330304",
+   "osm_addr": "201 warspite avenue",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Waitara Pharmacy",
+   "reg_addr": "56 McLean Street, Waitara, 4320",
+   "osm": "Waitara Pharmacy",
+   "osm_id": "n4583706458",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Wakefield Pharmacy",
+   "reg_addr": "4 Edward Street Wakefield 7025",
+   "osm": "Wakefield Pharmacy",
+   "osm_id": "n6824681085",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Walls & Roche Royal Oak Pharmacy",
+   "reg_addr": "792 Manukau Road, Royal Oak, Auckland, 1023",
+   "osm": "Unichem",
+   "osm_id": "n2692339082",
+   "osm_addr": "792 manukau road",
+   "score": 3.5
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Willis St. Pharmacy",
+   "reg_addr": "58 Willis Street Wellington Central Wellington 6011",
+   "osm": "Unichem",
+   "osm_id": "n279428352",
+   "osm_addr": "58 willis street 6011",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Wellsford Pharmacy",
+   "reg_addr": "Suite 1, 149 Rodney Street, Wellsford, 0900",
+   "osm": "Wellsford Pharmacy",
+   "osm_id": "n3931615531",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Western Heights Pharmacy",
+   "reg_addr": "10 Brookland Road Western Heights Rotorua 3015",
+   "osm": "Western Heights Pharmacy",
+   "osm_id": "n5862527429",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Westmere Pharmacy Limited",
+   "reg_addr": "156 Garnet Road Westmere Auckland 1022",
+   "osm": "Westmere Pharmacy",
+   "osm_id": "n5265311715",
+   "osm_addr": "156 garnet road 1022",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Westshore Pharmacy",
+   "reg_addr": "3 Alfred Street, Westshore, Napier, 4110",
+   "osm": "Westshore Pharmacy",
+   "osm_id": "w372801728",
+   "osm_addr": "3 alfred street",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Westview Pharmacy",
+   "reg_addr": "Tenancy 2, Westview Medical Centre 5 Glendale Road Glen Eden AUCKLAND 0602",
+   "osm": "Westview Pharmacy",
+   "osm_id": "n13356436901",
+   "osm_addr": "5 glendale road 0602",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Adamson's Pharmacy",
+   "reg_addr": "52 King Street Whakatane 3120",
+   "osm": "Unichem",
+   "osm_id": "n6262861000",
+   "osm_addr": "52 king street",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Kope Pharmacy",
+   "reg_addr": "78 King Street Whakatane 3120",
+   "osm": "Kope Pharmacy",
+   "osm_id": "n6262861002",
+   "osm_addr": "78 king street",
+   "score": 4.0
+  },
+  {
+   "tier": "A",
+   "register": "Whangamata Pharmacy",
+   "reg_addr": "429 Port Road Whangamata 3620",
+   "osm": "Whangamata Pharmacy",
+   "osm_id": "n5809648654",
+   "osm_addr": "429 port road 3620",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Devonport 1st Pharmacy",
+   "reg_addr": "33 Victoria Road Devonport Auckland 0624",
+   "osm": "Devonport 1st Pharmacy",
+   "osm_id": "n13556486130",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Wellington Central Pharmacy",
+   "reg_addr": "204 Lambton Quay Wellington Central Wellington 6011",
+   "osm": "Unichem",
+   "osm_id": "n279428558",
+   "osm_addr": "204 lambton quay 6011",
+   "score": 4.0
+  },
+  {
+   "tier": "B",
+   "register": "Selwyn Village Pharmacy",
+   "reg_addr": "316 Selwyn Street, Spreydon, Christchurch, 8024",
+   "osm": "Selwyn Village Pharmacy",
+   "osm_id": "n11181950501",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "B",
+   "register": "Woodham Road Pharmacy",
+   "reg_addr": "Shop 1, 23 Woodham Road, Linwood, Christchurch 8062",
+   "osm": "Woodham Road Pharmacy",
+   "osm_id": "n5421260183",
+   "osm_addr": "",
+   "score": 3.0
+  },
+  {
+   "tier": "A",
+   "register": "Kiwi Pharmacy Yaldhurst",
+   "reg_addr": "3 Filly Place Yaldhurst Christchurch 8042",
+   "osm": "Kiwi Pharmacy",
+   "osm_id": "n13583667021",
+   "osm_addr": "3 filly place 8042",
+   "score": 3.0
+  }
+ ],
+ "rejected_ambiguous": [
+  {
+   "tier": "B",
+   "register": "Windsor Pharmacy",
+   "reg_addr": "62 - 64 Windsor Street, Windsor, Invercargill, 9810",
+   "osm": "Windsor Pharmacy",
+   "osm_id": "w380939098"
+  },
+  {
+   "tier": "B",
+   "register": "After Hours Pharmacy",
+   "reg_addr": "Ground Floor, 17 Adelaide Road, Mount Cook, Wellington, 6021",
+   "osm": "After Hours Medical Centre",
+   "osm_id": "n11090757400"
+  },
+  {
+   "tier": "B",
+   "register": "After Hours Pharmacy",
+   "reg_addr": "Ground Floor, 17 Adelaide Road, Mount Cook, Wellington, 6021",
+   "osm": "After Hours Pharmacy",
+   "osm_id": "n281145523"
+  },
+  {
+   "tier": "B",
+   "register": "Healthcare Pharmacy Clendon",
+   "reg_addr": "9 Robert Ross Place Clendon Park AUCKLAND 2103",
+   "osm": "Clendon Pharmacy",
+   "osm_id": "n5053006573"
+  },
+  {
+   "tier": "A",
+   "register": "Unichem Takanini Pharmacy",
+   "reg_addr": "3-226 Great South Road Takanini Auckland 2112",
+   "osm": "Prohealth Pharmacy",
+   "osm_id": "n13812383401"
+  },
+  {
+   "tier": "B",
+   "register": "Merivale Medical Pharmacy",
+   "reg_addr": "236 Papanui Road Strowan Christchurch 8014",
+   "osm": "Merivale Medical Pharmacy",
+   "osm_id": "n11082473043"
+  },
+  {
+   "tier": "B",
+   "register": "Your Health Centre Pharmacy",
+   "reg_addr": "488 Great South Road Papatoetoe AUCKLAND 2025",
+   "osm": "Your Health Pharmacy",
+   "osm_id": "n3508008516"
+  },
+  {
+   "tier": "B",
+   "register": "Avondale Kiwi Chemist",
+   "reg_addr": "256 Rosebank Road Avondale AUCKLAND 1026",
+   "osm": "Avondale Pharmacy",
+   "osm_id": "n13546931944"
+  },
+  {
+   "tier": "B",
+   "register": "New Windsor Pharmacy",
+   "reg_addr": "1/271 - 1/275 New Windsor Road New Windsor Auckland 0600",
+   "osm": "Windsor Pharmacy",
+   "osm_id": "w380939098"
+  },
+  {
+   "tier": "B",
+   "register": "New Windsor Pharmacy",
+   "reg_addr": "1/271 - 1/275 New Windsor Road New Windsor Auckland 0600",
+   "osm": "New Windsor Pharmacy",
+   "osm_id": "n4956181017"
+  },
+  {
+   "tier": "B",
+   "register": "Lockington's Pharmacy Limited",
+   "reg_addr": "198-202 Stoddard Road Mount Roskill Auckland 1041",
+   "osm": "Lockingtons Pharmacy",
+   "osm_id": "n4943409517"
+  },
+  {
+   "tier": "B",
+   "register": "Lockington's Pharmacy Limited",
+   "reg_addr": "198-202 Stoddard Road Mount Roskill Auckland 1041",
+   "osm": "Lockingtons Pharmacy",
+   "osm_id": "n4943409516"
+  },
+  {
+   "tier": "B",
+   "register": "Lockington's Medical Centre Pharmacy",
+   "reg_addr": "Tenancy 2, 223 Stoddard Road, Mt Roskill, Auckland, 1041",
+   "osm": "Lockingtons Pharmacy",
+   "osm_id": "n4943409517"
+  },
+  {
+   "tier": "B",
+   "register": "Lockington's Medical Centre Pharmacy",
+   "reg_addr": "Tenancy 2, 223 Stoddard Road, Mt Roskill, Auckland, 1041",
+   "osm": "Lockingtons Pharmacy",
+   "osm_id": "n4943409516"
+  },
+  {
+   "tier": "B",
+   "register": "Avondale Pharmacy",
+   "reg_addr": "2144 - 2146 Great North Road Avondale Auckland 0600",
+   "osm": "Avondale Pharmacy",
+   "osm_id": "n13546931944"
+  },
+  {
+   "tier": "B",
+   "register": "Henderson Medical Centre Pharmacy",
+   "reg_addr": "Unit E, 2-4 Montel Avenue, Henderson, Auckland, 0612",
+   "osm": "Henderson Discount Pharmacy",
+   "osm_id": "n3740816538"
+  },
+  {
+   "tier": "B",
+   "register": "The Crossing Pharmacy",
+   "reg_addr": "Shop RG-12, Tauranga Crossing 2 Taurikura Drive Tauriko Tauranga 3110",
+   "osm": "The Crossing Pharmacy",
+   "osm_id": "n5646863757"
+  },
+  {
+   "tier": "B",
+   "register": "Downtown Pharmacy Mt Maunganui",
+   "reg_addr": "152 Maunganui Road Mt Maunganui TAURANGA 3116",
+   "osm": "Downtown Pharmacy Mt. Maunganui",
+   "osm_id": "n5551688224"
+  },
+  {
+   "tier": "B",
+   "register": "Clendon Discount Pharmacy",
+   "reg_addr": "Shop C6 Clendon Town Centre Palmers Road Manurewa West Auckland 2103",
+   "osm": "Clendon Pharmacy",
+   "osm_id": "n5053006573"
+  },
+  {
+   "tier": "A",
+   "register": "Windsor Medical Pharmacy",
+   "reg_addr": "Shop 2, 51 Corinthian Drive, Albany, Auckland, 0632",
+   "osm": "Winsor Pharmacy",
+   "osm_id": "n13982050904"
+  },
+  {
+   "tier": "B",
+   "register": "Windsor Medical Pharmacy",
+   "reg_addr": "Shop 2, 51 Corinthian Drive, Albany, Auckland, 0632",
+   "osm": "New Windsor Pharmacy",
+   "osm_id": "n4956181017"
+  },
+  {
+   "tier": "B",
+   "register": "Owhata Medical Centre Pharmacy",
+   "reg_addr": "Unit 1B, 556 Te Ngae Road Owhata Rotorua 3010",
+   "osm": "Owhata Pharmacy",
+   "osm_id": "n5862527694"
+  },
+  {
+   "tier": "B",
+   "register": "Owhata Medical Centre Pharmacy",
+   "reg_addr": "Unit 1B, 556 Te Ngae Road Owhata Rotorua 3010",
+   "osm": "Owhata Pharmacy",
+   "osm_id": "n5862527681"
+  },
+  {
+   "tier": "B",
+   "register": "Antidote Gardens",
+   "reg_addr": "Shop 2, Gardens Shopping Mall 1 North Road North East Valley Dunedin 9010",
+   "osm": "Antidote Gardens",
+   "osm_id": "n6403211798"
+  },
+  {
+   "tier": "B",
+   "register": "Avondale Family Chemist",
+   "reg_addr": "1784 Great North Road Avondale Auckland 1026",
+   "osm": "Avondale Pharmacy",
+   "osm_id": "n13546931944"
+  },
+  {
+   "tier": "B",
+   "register": "White Swan Pharmacy",
+   "reg_addr": "460 Richardson Road Mt Roskill Auckland 1041",
+   "osm": "Your Health Pharmacy",
+   "osm_id": "n3508008516"
+  },
+  {
+   "tier": "B",
+   "register": "Robertsons Hunter Street Pharmacy",
+   "reg_addr": "41 Hunter Street, Hawera, 4610",
+   "osm": "Robertsons Pharmacy",
+   "osm_id": "n13323558680"
+  },
+  {
+   "tier": "B",
+   "register": "Robertsons High Street Pharmacy",
+   "reg_addr": "94 High Street HAWERA 4610",
+   "osm": "Robertsons Pharmacy",
+   "osm_id": "n13323558680"
+  },
+  {
+   "tier": "B",
+   "register": "ProHealth Pharmacy Papatoetoe",
+   "reg_addr": "230C Great South Road, Papatoetoe, Auckland, 2025",
+   "osm": "Prohealth Pharmacy",
+   "osm_id": "n13812383401"
+  },
+  {
+   "tier": "B",
+   "register": "Alabasters Pharmacy",
+   "reg_addr": "200 Papanui Road, Merivale, Christchurch, 8014",
+   "osm": "Merivale Medical Pharmacy",
+   "osm_id": "n11082473043"
+  },
+  {
+   "tier": "B",
+   "register": "Mydispensary Pharmacy & Clinic",
+   "reg_addr": "383 Great North Road, Henderson, Auckland, 0612",
+   "osm": "Henderson Discount Pharmacy",
+   "osm_id": "n3740816538"
+  },
+  {
+   "tier": "B",
+   "register": "The Crossing Pharmacy",
+   "reg_addr": "Shop RG-12, Tauranga Crossing 2 Taurikura Drive Tauriko Tauranga 3110",
+   "osm": "Downtown Pharmacy Mt. Maunganui",
+   "osm_id": "n5551688224"
+  },
+  {
+   "tier": "B",
+   "register": "Thornton's Pharmacy",
+   "reg_addr": "1895 Great North Road Avondale Auckland 1026",
+   "osm": "Avondale Pharmacy",
+   "osm_id": "n13546931944"
+  },
+  {
+   "tier": "B",
+   "register": "Antidote Octagon",
+   "reg_addr": "2 George Street Dunedin Central Dunedin 9016",
+   "osm": "Antidote",
+   "osm_id": "w683849572"
+  },
+  {
+   "tier": "B",
+   "register": "Antidote North",
+   "reg_addr": "650 George Street, North Dunedin, Dunedin, 9010",
+   "osm": "Antidote",
+   "osm_id": "w683849572"
+  },
+  {
+   "tier": "B",
+   "register": "Antidote Mornington",
+   "reg_addr": "170 Eglinton Road, Mornington, Dunedin, 9011",
+   "osm": "Antidote",
+   "osm_id": "w683849572"
+  },
+  {
+   "tier": "B",
+   "register": "Antidote Gardens",
+   "reg_addr": "Shop 2, Gardens Shopping Mall 1 North Road North East Valley Dunedin 9010",
+   "osm": "Antidote",
+   "osm_id": "w683849572"
+  },
+  {
+   "tier": "C",
+   "register": "ProHealth Manukau Pharmacy",
+   "reg_addr": "Unit A, 8/597 Great South Road, Manukau, Auckland, 2104",
+   "osm": "Prohealth Pharmacy",
+   "osm_id": "n13812383401"
+  }
+ ]
+}

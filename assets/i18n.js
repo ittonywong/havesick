@@ -27,6 +27,7 @@ window.I18N = {
     sourceError: 'Source currently unreachable — showing last known value.',
     call: '📞 Call', gmaps: 'Google Maps', amaps: 'Apple Maps', website: 'Website',
     dataError: 'Live wait data could not be loaded right now. Showing locations only — please phone before going.',
+    tabsAria: 'Sections', tabClinics: '🏥 Clinics & waits', tabRx: '💊 Pharmacies & medicines',
     dataOld: 'Live wait data is more than 30 minutes old. Wait times are greyed out.',
     srcOk: 'OK', srcErr: 'unreachable', lastOk: 'last success', you: 'You are here'
   },
@@ -58,6 +59,7 @@ window.I18N = {
     sourceError: '來源暫時連唔到——顯示緊上一次嘅數值。',
     call: '📞 打電話', gmaps: 'Google 地圖', amaps: 'Apple 地圖', website: '網站',
     dataError: '暫時載入唔到即時等候資料，只顯示位置——出發前請先打電話。',
+    tabsAria: '版面', tabClinics: '🏥 診所及輪候', tabRx: '💊 藥房及藥物',
     dataOld: '即時等候資料已超過 30 分鐘，等候時間已變灰色。',
     srcOk: '正常', srcErr: '連唔到', lastOk: '上次成功', you: '你喺度'
   }

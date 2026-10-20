@@ -12,7 +12,7 @@
     ['Gisborne', -38.6623, 178.0176], ['Whanganui', -39.9301, 175.0479], ['Timaru', -44.3970, 171.2550]
   ];
   const $ = (s) => document.querySelector(s);
-  const S = { lang: localStorage.getItem('havesick.lang') || 'en', loc: null, live: [], osm: [], sources: {}, generatedAt: null, dataError: false, markers: null, userMarker: null };
+  const S = { lang: (localStorage.getItem('havesick.lang') === 'zh' ? 'zh' : 'en'), loc: null, live: [], osm: [], sources: {}, generatedAt: null, dataError: false, markers: null, userMarker: null };
   const t = (k) => (I18N[S.lang] && I18N[S.lang][k]) || I18N.en[k] || k;
   const now = () => (window.__HAVESICK_NOW__ ? new Date(window.__HAVESICK_NOW__) : new Date());
 
@@ -91,7 +91,7 @@
     document.querySelectorAll('[data-i18n]').forEach((el) => { const k = el.dataset.i18n; const v = t(k); if (/<b>/.test(v)) el.innerHTML = v; else el.textContent = v; });
     document.querySelectorAll('[data-i18n-html]').forEach((el) => { el.innerHTML = t(el.dataset.i18nHtml); });
     document.querySelectorAll('[data-i18n-aria]').forEach((el) => el.setAttribute('aria-label', t(el.dataset.i18nAria)));
-    $('#langBtn').textContent = S.lang === 'zh' ? 'English' : '繁中';
+    $('#langBtn').textContent = S.lang === 'zh' ? 'EN' : '繁';
     updateFontUI();
   }
   function renderSources() {
@@ -151,6 +151,7 @@
       `<div class="stalewarn">${t('staleWarn')}${p.stale ? ' ' + t('sourceError') : ''}</div></div>`;
   }
   function render() {
+    if (window.HaveSickRx && window.HaveSickRx.active()) { window.HaveSickRx.render(); return; }  // pharmacy view owns the map
     renderBanner(); renderSources();
     const list = $('#list'); list.innerHTML = '';
     const items = candidates();
@@ -227,7 +228,7 @@
     sel.addEventListener('change', () => { if (sel.value !== '') { const c = CITIES[+sel.value]; setLoc(c[1], c[2], 'city', c[0]); } });
     $('#locBtn').addEventListener('click', locate);
     ['#typeSel', '#radiusSel', '#sortSel'].forEach((s) => $(s).addEventListener('change', render));
-    $('#langBtn').addEventListener('click', () => { S.lang = S.lang === 'zh' ? 'en' : 'zh'; localStorage.setItem('havesick.lang', S.lang); applyI18n(); render(); if (S.loc) setLoc(S.loc.lat, S.loc.lon, S.loc.method, CITIES[+sel.value] ? CITIES[+sel.value][0] : ''); });
+    $('#langBtn').addEventListener('click', () => { S.lang = S.lang === 'zh' ? 'en' : 'zh'; localStorage.setItem('havesick.lang', S.lang); applyI18n(); if (window.HaveSickRx) window.HaveSickRx.onLang(); render(); if (S.loc) setLoc(S.loc.lat, S.loc.lon, S.loc.method, CITIES[+sel.value] ? CITIES[+sel.value][0] : ''); });
     $('#fontDown').addEventListener('click', () => setFontLevel(getFontLevel() - 1));
     $('#fontUp').addEventListener('click', () => setFontLevel(getFontLevel() + 1));
     $('#fontReset').addEventListener('click', () => setFontLevel(0));
@@ -240,6 +241,6 @@
     const qs = new URLSearchParams(location.search);
     if (qs.get('nolocate') !== '1') locate();
   }
-  window.HaveSick = { state: S, render, setLoc, setFontLevel, FONT_LEVELS, get map() { return map; } };
+  window.HaveSick = { state: S, render, setLoc, setFontLevel, FONT_LEVELS, distKm, fmtKm, t, get map() { return map; } };
   boot();
 })();

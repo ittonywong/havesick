@@ -6,7 +6,8 @@
 <title>Have Sick — NZ urgent care wait times near you</title>
 <meta name="description" content="Find the nearest New Zealand urgent care clinic or hospital with live wait times, and get directions.">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/style.css?v=3">
+<link rel="stylesheet" href="assets/rx.css?v=3">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="assets/icon-192.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -30,9 +31,14 @@
       <button id="fontUp" type="button" class="fbtn" data-i18n-aria="fontLarger" aria-label="Larger text">A+</button>
       <span id="fontLevel" class="flevel" aria-live="polite">100%</span>
     </div>
-    <button id="langBtn" type="button" class="lang" data-i18n-aria="langAria" aria-label="切換至繁體中文">繁中</button>
+    <button id="langBtn" type="button" class="lang" data-i18n-aria="langAria" aria-label="切換至繁體中文">繁</button>
   </div>
 </header>
+
+<nav class="tabs" data-i18n-aria="tabsAria" aria-label="Sections">
+  <button type="button" id="tabClinics" class="tab" aria-pressed="true" data-i18n="tabClinics">🏥 Clinics &amp; waits</button>
+  <button type="button" id="tabRx" class="tab" aria-pressed="false" aria-controls="rx" data-i18n="tabRx">💊 Pharmacies &amp; medicines</button>
+</nav>
 
 <section class="controls">
   <button id="locBtn" class="primary" data-i18n="useLocation">📍 Use my location</button>
@@ -42,7 +48,7 @@
   <p class="hint" data-i18n="tapHint">You can also tap the map to set your location.</p>
   <p id="locStatus" class="status" aria-live="polite"></p>
   <div class="filters">
-    <label><span data-i18n="show">Show</span>
+    <label class="f-type"><span data-i18n="show">Show</span>
       <select id="typeSel">
         <option value="urgent" data-i18n="fUrgent">Urgent &amp; ED</option>
         <option value="live" data-i18n="fLive">Live waits only</option>
@@ -50,19 +56,24 @@
       </select></label>
     <label><span data-i18n="within">Within (km)</span>
       <select id="radiusSel"><option>10</option><option selected>25</option><option>50</option><option>100</option></select></label>
-    <label><span data-i18n="sortBy">Sort</span>
+    <label class="f-sort"><span data-i18n="sortBy">Sort</span>
       <select id="sortSel">
         <option value="rec" data-i18n="sRec">Recommended</option>
         <option value="near" data-i18n="sNear">Nearest</option>
       </select></label>
   </div>
-  <p class="hint" data-i18n="sortHint">Recommended = open now → shortest wait → nearest.</p>
+  <p class="hint f-sort" data-i18n="sortHint">Recommended = open now → shortest wait → nearest.</p>
 </section>
 
 <div id="dataBanner" class="databanner" hidden></div>
 <div id="map" aria-label="Map"></div>
 
 <main>
+  <section id="rx" class="rx" aria-labelledby="rxTitle" hidden>
+    <div id="rxHead" class="rx-head"><h2 id="rxTitle">💊 Pharmacies &amp; medicines</h2></div>
+    <p id="rxMi" class="rx-mi" hidden></p>
+    <div id="rxBody"></div>
+  </section>
   <ol id="list" class="list"></ol>
   <p id="empty" class="empty" data-i18n="noLocation">Set your location to see the nearest places.</p>
 </main>
@@ -86,7 +97,9 @@
 </footer>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-<script src="assets/i18n.js"></script>
-<script src="assets/app.js"></script>
+<script src="assets/i18n.js?v=3"></script>
+<script src="assets/app.js?v=3"></script>
+<script src="assets/rx-i18n.js?v=3"></script>
+<script src="assets/rx.js?v=3"></script>
 </body>
 </html>
