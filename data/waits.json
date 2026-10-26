@@ -1,14 +1,14 @@
 {
- "generated_at": "2026-10-26T12:13:45Z",
+ "generated_at": "2026-10-26T15:00:20Z",
  "user_agent": "HaveSick/0.2 (personal family wait-time viewer; +https://github.com/ittonywong/havesick)",
  "sources": {
   "whitecross": {
    "name": "White Cross (Auckland & Whangārei)",
    "url": "https://www.whitecross.co.nz/urgent-care-wait-times",
-   "attempted_at": "2026-10-26T12:13:45Z",
+   "attempted_at": "2026-10-26T15:00:20Z",
    "status": "ok",
-   "fetched_at": "2026-10-26T12:13:45Z",
-   "last_success_at": "2026-10-26T12:13:45Z",
+   "fetched_at": "2026-10-26T15:00:20Z",
+   "last_success_at": "2026-10-26T15:00:20Z",
    "source_updated_at": null,
    "source_updated_note": "Rendered live on each page load (no timestamp published)",
    "error": null,
@@ -16,7 +16,7 @@
    "next_attempt_at": null,
    "count": 10,
    "http": {
-    "bytes": 29301,
+    "bytes": 29310,
     "last_status": 200,
     "etag": null,
     "last_modified": null
@@ -25,18 +25,18 @@
   "pegasus": {
    "name": "Pegasus 24 Hour Surgery (Christchurch)",
    "url": "https://www.pegasus.health.nz/wait-time-dashboard",
-   "attempted_at": "2026-10-26T12:13:46Z",
+   "attempted_at": "2026-10-26T15:00:21Z",
    "status": "ok",
-   "fetched_at": "2026-10-26T12:13:46Z",
-   "last_success_at": "2026-10-26T12:13:46Z",
-   "source_updated_at": "2026-10-26T12:13:00Z",
+   "fetched_at": "2026-10-26T15:00:21Z",
+   "last_success_at": "2026-10-26T15:00:21Z",
+   "source_updated_at": "2026-10-26T15:00:00Z",
    "source_updated_note": "Page \"Last updated\" text (appears to equal page render time)",
    "error": null,
    "failures": 0,
    "next_attempt_at": null,
    "count": 1,
    "http": {
-    "bytes": 11379,
+    "bytes": 11374,
     "last_status": 200,
     "etag": null,
     "last_modified": null
@@ -45,10 +45,10 @@
   "accidenthealth": {
    "name": "Accident & HealthCare (Tauranga)",
    "url": "https://www.accidenthealth.co.nz/",
-   "attempted_at": "2026-10-26T12:13:48Z",
+   "attempted_at": "2026-10-26T15:00:23Z",
    "status": "ok",
-   "fetched_at": "2026-10-26T12:13:48Z",
-   "last_success_at": "2026-10-26T12:13:48Z",
+   "fetched_at": "2026-10-26T15:00:23Z",
+   "last_success_at": "2026-10-26T15:00:23Z",
    "source_updated_at": null,
    "source_updated_note": "Rendered live on page load; the page itself refreshes every 120 s",
    "error": null,
@@ -56,7 +56,7 @@
    "next_attempt_at": null,
    "count": 1,
    "http": {
-    "bytes": 4860,
+    "bytes": 4861,
     "last_status": 200,
     "etag": null,
     "last_modified": null
@@ -65,21 +65,21 @@
   "anglesea": {
    "name": "Anglesea Clinic (Hamilton)",
    "url": "https://angleseawaittimes.org.nz/waittimes.json",
-   "attempted_at": "2026-10-26T12:13:49Z",
+   "attempted_at": "2026-10-26T15:00:25Z",
    "status": "ok",
-   "fetched_at": "2026-10-26T12:13:49Z",
-   "last_success_at": "2026-10-26T12:13:49Z",
-   "source_updated_at": "2026-10-26T11:27:22Z",
+   "fetched_at": "2026-10-26T15:00:25Z",
+   "last_success_at": "2026-10-26T15:00:25Z",
+   "source_updated_at": "2026-10-26T14:07:43Z",
    "source_updated_note": "HTTP Last-Modified of waittimes.json (updated irregularly)",
    "error": null,
    "failures": 0,
    "next_attempt_at": null,
    "count": 1,
    "http": {
-    "bytes": 74,
+    "bytes": 76,
     "last_status": 200,
-    "etag": "W/\"6adf391a-60\"",
-    "last_modified": "Mon, 26 Oct 2026 11:27:22 GMT"
+    "etag": "W/\"6adf5eaf-5e\"",
+    "last_modified": "Mon, 26 Oct 2026 14:07:43 GMT"
    }
   }
  },
@@ -96,12 +96,12 @@
    "website": "https://www.whitecross.co.nz/clinics/ascot-24-7-uc",
    "wait": {
     "type": "busyness",
-    "value": 3,
+    "value": 1,
     "scale_max": 10,
-    "label": "3/10 busyness"
+    "label": "1/10 busyness"
    },
    "source": "whitecross",
-   "fetched_at": "2026-10-26T12:13:45Z",
+   "fetched_at": "2026-10-26T15:00:20Z",
    "stale": false,
    "source_updated_at": null
   },
@@ -122,7 +122,7 @@
     "label": "0/10 busyness"
    },
    "source": "whitecross",
-   "fetched_at": "2026-10-26T12:13:45Z",
+   "fetched_at": "2026-10-26T15:00:20Z",
    "stale": false,
    "source_updated_at": null
   },
@@ -138,12 +138,12 @@
    "website": "https://www.whitecross.co.nz/clinics/henderson-24-7-uc",
    "wait": {
     "type": "busyness",
-    "value": 1,
+    "value": 0,
     "scale_max": 10,
-    "label": "1/10 busyness"
+    "label": "0/10 busyness"
    },
    "source": "whitecross",
-   "fetched_at": "2026-10-26T12:13:45Z",
+   "fetched_at": "2026-10-26T15:00:20Z",
    "stale": false,
    "source_updated_at": null
   },
@@ -164,7 +164,7 @@
     "label": "0/10 busyness"
    },
    "source": "whitecross",
-   "fetched_at": "2026-10-26T12:13:45Z",
+   "fetched_at": "2026-10-26T15:00:20Z",
    "stale": false,
    "source_updated_at": null
   },
@@ -180,12 +180,12 @@
    "website": "https://www.whitecross.co.nz/clinics/otara-24-7-gp-uc",
    "wait": {
     "type": "busyness",
-    "value": 1,
+    "value": 2,
     "scale_max": 10,
-    "label": "1/10 busyness"
+    "label": "2/10 busyness"
    },
    "source": "whitecross",
-   "fetched_at": "2026-10-26T12:13:45Z",
+   "fetched_at": "2026-10-26T15:00:20Z",
    "stale": false,
    "source_updated_at": null
   },
@@ -206,7 +206,7 @@
     "label": "0/10 busyness"
    },
    "source": "whitecross",
-   "fetched_at": "2026-10-26T12:13:45Z",
+   "fetched_at": "2026-10-26T15:00:20Z",
    "stale": false,
    "source_updated_at": null
   },
@@ -227,7 +227,7 @@
     "label": "0/10 busyness"
    },
    "source": "whitecross",
-   "fetched_at": "2026-10-26T12:13:45Z",
+   "fetched_at": "2026-10-26T15:00:20Z",
    "stale": false,
    "source_updated_at": null
   },
@@ -248,7 +248,7 @@
     "label": "0/10 busyness"
    },
    "source": "whitecross",
-   "fetched_at": "2026-10-26T12:13:45Z",
+   "fetched_at": "2026-10-26T15:00:20Z",
    "stale": false,
    "source_updated_at": null
   },
@@ -269,7 +269,7 @@
     "label": "0/10 busyness"
    },
    "source": "whitecross",
-   "fetched_at": "2026-10-26T12:13:45Z",
+   "fetched_at": "2026-10-26T15:00:20Z",
    "stale": false,
    "source_updated_at": null
   },
@@ -290,7 +290,7 @@
     "label": "0/10 busyness"
    },
    "source": "whitecross",
-   "fetched_at": "2026-10-26T12:13:45Z",
+   "fetched_at": "2026-10-26T15:00:20Z",
    "stale": false,
    "source_updated_at": null
   },
@@ -306,17 +306,17 @@
    "website": "https://www.24hoursurgery.co.nz/",
    "wait": {
     "type": "minutes",
-    "value": 300,
+    "value": 60,
     "approx_hours": true,
     "plus": false,
-    "label": "~5 h (less-urgent patients)"
+    "label": "~1 h (less-urgent patients)"
    },
-   "patients_waiting": 6,
-   "in_treatment": 7,
-   "time_critical": 1,
-   "source_updated_at": "2026-10-26T12:13:00Z",
+   "patients_waiting": 1,
+   "in_treatment": 1,
+   "time_critical": 0,
+   "source_updated_at": "2026-10-26T15:00:00Z",
    "source": "pegasus",
-   "fetched_at": "2026-10-26T12:13:46Z",
+   "fetched_at": "2026-10-26T15:00:21Z",
    "stale": false
   },
   {
@@ -336,7 +336,7 @@
    },
    "patients_waiting": null,
    "source": "accidenthealth",
-   "fetched_at": "2026-10-26T12:13:48Z",
+   "fetched_at": "2026-10-26T15:00:23Z",
    "stale": false,
    "source_updated_at": null
   },
@@ -352,35 +352,35 @@
    "website": "https://www.angleseaclinic.org.nz/",
    "wait": {
     "type": "minutes",
-    "value": 180,
-    "label": "3h 0m"
+    "value": 120,
+    "label": "2h 0m"
    },
-   "ed_wait_minutes": 600,
-   "patients_waiting": 10,
-   "source_updated_at": "2026-10-26T11:27:22Z",
+   "ed_wait_minutes": 480,
+   "patients_waiting": 7,
+   "source_updated_at": "2026-10-26T14:07:43Z",
    "source": "anglesea",
-   "fetched_at": "2026-10-26T12:13:49Z",
+   "fetched_at": "2026-10-26T15:00:25Z",
    "stale": false
   }
  ],
  "robots": {
   "https://www.whitecross.co.nz": {
-   "fetched_at": "2026-10-25T13:42:15Z",
+   "fetched_at": "2026-10-26T15:00:20Z",
    "status": "ok",
    "body": "User-agent: *\r\nDisallow: *?p=*\r\nDisallow: *?q=*\r\nDisallow: /images/*\r\nDisallow: /bundles/*\r\nDisallow: /App_Plugins/*\r\nDisallow: /umbraco/*\r\nDisallow: /api/*\r\nDisallow: *?mode=*\r\nDisallow: *?width=*\r\n"
   },
   "https://www.pegasus.health.nz": {
-   "fetched_at": "2026-10-25T13:42:18Z",
+   "fetched_at": "2026-10-26T15:00:22Z",
    "status": "ok",
    "body": "# robots.txt for https://www.pegasus.health.nz/\n\nsitemap: https://www.pegasus.health.nz/sitemaps-1-sitemap.xml\n\n# live - don't allow web crawlers to index cpresources/ or vendor/\n\nUser-agent: *\nDisallow: /cpresources/\nDisallow: /vendor/\nDisallow: /.env\nDisallow: /cache/\n\n\n# Disallow ChatGPT bot, as there's no benefit to allowing it to index your site\nUser-agent: GPTBot\nDisallow: /\n\n# Disallow Google Bard and Vertex AI bots, as there's no benefit to allowing it to index your site\nUser-agent: Google-Extended\nDisallow: /\n"
   },
   "https://www.accidenthealth.co.nz": {
-   "fetched_at": "2026-10-25T13:42:19Z",
+   "fetched_at": "2026-10-26T15:00:24Z",
    "status": "ok",
    "body": "User-agent: *\nDisallow: /application/attributes\nDisallow: /application/authentication\nDisallow: /application/bootstrap\nDisallow: /application/config\nDisallow: /application/controllers\nDisallow: /application/elements\nDisallow: /application/helpers\nDisallow: /application/jobs\nDisallow: /application/languages\nDisallow: /application/mail\nDisallow: /application/models\nDisallow: /application/page_types\nDisallow: /application/single_pages\nDisallow: /application/views\nDisallow: /ccm/system/captcha/picture\nSitemap: https://www.accidenthealth.co.nz/sitemap.xml\n"
   },
   "https://angleseawaittimes.org.nz": {
-   "fetched_at": "2026-10-25T13:42:21Z",
+   "fetched_at": "2026-10-26T15:00:26Z",
    "status": "ok",
    "body": "# As a condition of accessing this website, you agree to abide by the following\n# content signals:\n\n# (a)  If a content-signal = yes, you may collect content for the corresponding\n#      use.\n# (b)  If a content-signal = no, you may not collect content for the\n#      corresponding use.\n# (c)  If the website operator does not include a content signal for a\n#      corresponding use, the website operator neither grants nor restricts\n#      permission via content signal with respect to the corresponding use.\n\n# The content signals and their meanings are:\n\n# search:   building a search index and providing search results (e.g., returning\n#           hyperlinks and short excerpts from your website's contents). Search does not\n#           include providing AI-generated search summaries.\n# ai-input: inputting content into one or more AI models (e.g., retrieval\n#           augmented generation, grounding, or other real-time taking of content for\n#           generative AI search answers).\n# ai-train: training or fine-tuning AI models.\n\n# ANY RESTRICTIONS EXPRESSED VIA CONTENT SIGNALS ARE EXPRESS RESERVATIONS OF\n# RIGHTS UNDER ARTICLE 4 OF THE EUROPEAN UNION DIRECTIVE 2019/790 ON COPYRIGHT\n# AND RELATED RIGHTS IN THE DIGITAL SINGLE MARKET.\n"
   }
