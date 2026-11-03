@@ -1,14 +1,14 @@
 {
- "generated_at": "2026-11-03T04:30:36Z",
+ "generated_at": "2026-11-03T05:27:36Z",
  "user_agent": "HaveSick/0.2 (personal family wait-time viewer; +https://github.com/ittonywong/havesick)",
  "sources": {
   "whitecross": {
    "name": "White Cross (Auckland & Whangārei)",
    "url": "https://www.whitecross.co.nz/urgent-care-wait-times",
-   "attempted_at": "2026-11-03T04:30:36Z",
+   "attempted_at": "2026-11-03T05:27:36Z",
    "status": "ok",
-   "fetched_at": "2026-11-03T04:30:36Z",
-   "last_success_at": "2026-11-03T04:30:36Z",
+   "fetched_at": "2026-11-03T05:27:36Z",
+   "last_success_at": "2026-11-03T05:27:36Z",
    "source_updated_at": null,
    "source_updated_note": "Rendered live on each page load (no timestamp published)",
    "error": null,
@@ -16,7 +16,7 @@
    "next_attempt_at": null,
    "count": 10,
    "http": {
-    "bytes": 29325,
+    "bytes": 29337,
     "last_status": 200,
     "etag": null,
     "last_modified": null
@@ -25,11 +25,11 @@
   "pegasus": {
    "name": "Pegasus 24 Hour Surgery (Christchurch)",
    "url": "https://www.pegasus.health.nz/wait-time-dashboard",
-   "attempted_at": "2026-11-03T04:30:37Z",
+   "attempted_at": "2026-11-03T05:27:37Z",
    "status": "ok",
-   "fetched_at": "2026-11-03T04:30:37Z",
-   "last_success_at": "2026-11-03T04:30:37Z",
-   "source_updated_at": "2026-11-03T04:30:00Z",
+   "fetched_at": "2026-11-03T05:27:37Z",
+   "last_success_at": "2026-11-03T05:27:37Z",
+   "source_updated_at": "2026-11-03T05:27:00Z",
    "source_updated_note": "Page \"Last updated\" text (appears to equal page render time)",
    "error": null,
    "failures": 0,
@@ -45,9 +45,9 @@
   "accidenthealth": {
    "name": "Accident & HealthCare (Tauranga)",
    "url": "https://www.accidenthealth.co.nz/",
-   "attempted_at": "2026-11-03T04:30:38Z",
-   "status": "error",
-   "error": "ValueError: unrecognised wait value 'under 1h'",
+   "attempted_at": "2026-11-03T05:27:39Z",
+   "status": "skipped",
+   "error": "RuntimeError: backoff: skipped until 2026-11-03T05:49:38Z",
    "fetched_at": "2026-11-03T00:54:45Z",
    "last_success_at": "2026-11-03T00:54:45Z",
    "source_updated_at": null,
@@ -66,22 +66,21 @@
   "anglesea": {
    "name": "Anglesea Clinic (Hamilton)",
    "url": "https://angleseawaittimes.org.nz/waittimes.json",
-   "attempted_at": "2026-11-03T04:30:39Z",
+   "attempted_at": "2026-11-03T05:27:39Z",
    "status": "ok",
-   "not_modified": true,
-   "fetched_at": "2026-11-03T04:30:39Z",
-   "last_success_at": "2026-11-03T04:30:39Z",
-   "source_updated_at": "2026-11-03T03:14:31Z",
+   "fetched_at": "2026-11-03T05:27:39Z",
+   "last_success_at": "2026-11-03T05:27:39Z",
+   "source_updated_at": "2026-11-03T05:18:33Z",
    "source_updated_note": "HTTP Last-Modified of waittimes.json (updated irregularly)",
    "error": null,
    "failures": 0,
    "next_attempt_at": null,
    "count": 1,
    "http": {
-    "bytes": 0,
-    "last_status": 304,
-    "etag": "W/\"6ae95197-5f\"",
-    "last_modified": "Tue, 03 Nov 2026 03:14:31 GMT"
+    "bytes": 79,
+    "last_status": 200,
+    "etag": "W/\"6ae96ea9-5f\"",
+    "last_modified": "Tue, 03 Nov 2026 05:18:33 GMT"
    }
   }
  },
@@ -98,12 +97,12 @@
    "website": "https://www.whitecross.co.nz/clinics/ascot-24-7-uc",
    "wait": {
     "type": "busyness",
-    "value": 4,
+    "value": 3,
     "scale_max": 10,
-    "label": "4/10 busyness"
+    "label": "3/10 busyness"
    },
    "source": "whitecross",
-   "fetched_at": "2026-11-03T04:30:36Z",
+   "fetched_at": "2026-11-03T05:27:36Z",
    "stale": false,
    "source_updated_at": null
   },
@@ -124,7 +123,7 @@
     "label": "7/10 busyness"
    },
    "source": "whitecross",
-   "fetched_at": "2026-11-03T04:30:36Z",
+   "fetched_at": "2026-11-03T05:27:36Z",
    "stale": false,
    "source_updated_at": null
   },
@@ -145,7 +144,7 @@
     "label": "4/10 busyness"
    },
    "source": "whitecross",
-   "fetched_at": "2026-11-03T04:30:36Z",
+   "fetched_at": "2026-11-03T05:27:36Z",
    "stale": false,
    "source_updated_at": null
   },
@@ -161,12 +160,12 @@
    "website": "https://www.whitecross.co.nz/clinics/mt-roskill-gp-urgent-care",
    "wait": {
     "type": "busyness",
-    "value": 3,
+    "value": 2,
     "scale_max": 10,
-    "label": "3/10 busyness"
+    "label": "2/10 busyness"
    },
    "source": "whitecross",
-   "fetched_at": "2026-11-03T04:30:36Z",
+   "fetched_at": "2026-11-03T05:27:36Z",
    "stale": false,
    "source_updated_at": null
   },
@@ -182,12 +181,12 @@
    "website": "https://www.whitecross.co.nz/clinics/otara-24-7-gp-uc",
    "wait": {
     "type": "busyness",
-    "value": 6,
+    "value": 9,
     "scale_max": 10,
-    "label": "6/10 busyness"
+    "label": "9/10 busyness"
    },
    "source": "whitecross",
-   "fetched_at": "2026-11-03T04:30:36Z",
+   "fetched_at": "2026-11-03T05:27:36Z",
    "stale": false,
    "source_updated_at": null
   },
@@ -203,12 +202,12 @@
    "website": "https://www.whitecross.co.nz/clinics/st-lukes-uc",
    "wait": {
     "type": "busyness",
-    "value": 1,
+    "value": 3,
     "scale_max": 10,
-    "label": "1/10 busyness"
+    "label": "3/10 busyness"
    },
    "source": "whitecross",
-   "fetched_at": "2026-11-03T04:30:36Z",
+   "fetched_at": "2026-11-03T05:27:36Z",
    "stale": false,
    "source_updated_at": null
   },
@@ -229,7 +228,7 @@
     "label": "4/10 busyness"
    },
    "source": "whitecross",
-   "fetched_at": "2026-11-03T04:30:36Z",
+   "fetched_at": "2026-11-03T05:27:36Z",
    "stale": false,
    "source_updated_at": null
   },
@@ -245,12 +244,12 @@
    "website": "https://www.whitecross.co.nz/clinics/glenfield-gp-uc-1",
    "wait": {
     "type": "busyness",
-    "value": 4,
+    "value": 3,
     "scale_max": 10,
-    "label": "4/10 busyness"
+    "label": "3/10 busyness"
    },
    "source": "whitecross",
-   "fetched_at": "2026-11-03T04:30:36Z",
+   "fetched_at": "2026-11-03T05:27:36Z",
    "stale": false,
    "source_updated_at": null
   },
@@ -266,12 +265,12 @@
    "website": "https://www.whitecross.co.nz/clinics/lunn-ave-gp-uc-1",
    "wait": {
     "type": "busyness",
-    "value": 4,
+    "value": 3,
     "scale_max": 10,
-    "label": "4/10 busyness"
+    "label": "3/10 busyness"
    },
    "source": "whitecross",
-   "fetched_at": "2026-11-03T04:30:36Z",
+   "fetched_at": "2026-11-03T05:27:36Z",
    "stale": false,
    "source_updated_at": null
   },
@@ -287,12 +286,12 @@
    "website": "https://www.whitecross.co.nz/clinics/new-lynn-gp-uc",
    "wait": {
     "type": "busyness",
-    "value": 2,
+    "value": 1,
     "scale_max": 10,
-    "label": "2/10 busyness"
+    "label": "1/10 busyness"
    },
    "source": "whitecross",
-   "fetched_at": "2026-11-03T04:30:36Z",
+   "fetched_at": "2026-11-03T05:27:36Z",
    "stale": false,
    "source_updated_at": null
   },
@@ -313,12 +312,12 @@
     "plus": false,
     "label": "~3 h (less-urgent patients)"
    },
-   "patients_waiting": 13,
+   "patients_waiting": 16,
    "in_treatment": 16,
    "time_critical": 0,
-   "source_updated_at": "2026-11-03T04:30:00Z",
+   "source_updated_at": "2026-11-03T05:27:00Z",
    "source": "pegasus",
-   "fetched_at": "2026-11-03T04:30:37Z",
+   "fetched_at": "2026-11-03T05:27:37Z",
    "stale": false
   },
   {
@@ -357,11 +356,11 @@
     "value": 60,
     "label": "1h 0m"
    },
-   "ed_wait_minutes": 468,
-   "patients_waiting": 10,
-   "source_updated_at": "2026-11-03T03:14:31Z",
+   "ed_wait_minutes": 437,
+   "patients_waiting": 15,
+   "source_updated_at": "2026-11-03T05:18:33Z",
    "source": "anglesea",
-   "fetched_at": "2026-11-03T04:30:39Z",
+   "fetched_at": "2026-11-03T05:27:39Z",
    "stale": false
   }
  ],
